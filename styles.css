@@ -101,11 +101,22 @@ body {
   transition: 0.3s;
 }
 
-.navbar tombol {
+.tombol-login {
   display: flex;
   justify-content: right;
   align-items: right;
+  font-family: Poppins, sans-serif;
+  font-weight:900;
+  padding:10px 30px;
+  background-color:#d0cece;
+  border-radius:10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
 
+.tombol-login:hover {
+  background-color: #010101;
+  
 }
 
 .logo {
@@ -270,15 +281,98 @@ justify-content: center;
  
 }
 
-.footer {
+footer {
+  position: flex;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 5px;
+  background: #121212;
+  color: #f9f9f9;
+}
+
+
+
+footer section {
+  padding: 0 80px;
+}
+
+footer section {
+  position: relative;
+  padding-top: 30px;
+  margin-bottom: 100px;
+}
+
+footer section img {
+  display: block;
+  height: 30px;
+  margin: 10px auto 30px;
+  padding-top:10px;
+}
+
+
+
+footer section h3 {
+  color: rgb(255 255 255 / 40%);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+footer section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  text-align: center;
+}
+
+footer section ul li a {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(255 255 255 / 90%);
+}
+
+.socials {
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  translate: -50% 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  background-color: #f1f1f1;
-  color: #050505;
-  padding: 45px 20px;
+  gap: 24px;
+  font-size: 20px;
+  color: rgb(255 255 255 / 40%);
+}
+
+@media (width > 530px) {
+
+  footer section {
+    margin-bottom: 50px;
+  }
+
+  footer section img {
+    margin: 0 0 30px;
+  }
+
+  footer section ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 0;
+    place-items: start;
+    text-align: left;
+  }
+
+  .socials {
+    top: 37px;
+    left: 216px;
+    bottom: auto;
+    font-size: 18px;
+    gap: 3vw;
+    translate: 0;
+    padding-left: 24px;
+    border-left: 1px solid rgb(255 255 255 / 20%);
+  }
 }
 
 
