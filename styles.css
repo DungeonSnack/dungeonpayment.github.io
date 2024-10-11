@@ -180,7 +180,8 @@ justify-content: center;
 }
 
 .services {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -194,7 +195,7 @@ justify-content: center;
   align-items: center;
   gap: 30px;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 10px;
   background-color: #f4eeee;
   color: #000000;
@@ -222,7 +223,7 @@ justify-content: center;
   margin-top: 20px;
   flex-direction: column;
   padding: 0 170px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Image/fotbar.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/29.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
