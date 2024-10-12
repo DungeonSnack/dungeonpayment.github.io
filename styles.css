@@ -119,6 +119,29 @@ body {
   
 }
 
+.title .sbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 500px;
+  gap: 10px;
+}
+
+.sbox input {
+  width: 100%;
+  background: transparent;
+  border-style: groove;
+  border-color: #000;
+}
+
+.sbox .material-symbols-outlined {
+  color: #ffffff;
+  font-weight: bold;
+
+  
+}
+
 .logo {
   font-size: 2.5rem;
   display: flex;
