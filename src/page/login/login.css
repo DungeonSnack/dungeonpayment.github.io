@@ -33,7 +33,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url('/img/market.jpg');
+  background-image: url('/assets/img/market.jpg');
     background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
     background-position: center; /* Untuk posisi gambar di tengah */
     background-repeat: no-repeat; /* Agar gambar tidak berulang */
