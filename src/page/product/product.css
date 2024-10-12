@@ -49,7 +49,7 @@ body {
     height: 100vh;
     background-color: #f2f2f2;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/assets/img/foods.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("/assets/img/foods.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@ body {
    
   }
   
-  .navbar .menu {
+  .navbar .menu-nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -118,7 +118,7 @@ body {
     margin: 5px 0;
   }
   
-  .navbar .menu a {
+  .navbar .menu-nav a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -144,16 +144,33 @@ body {
     
   }
 
-  .menus {
-    width: 300px;
-    background-color: white;
+
+  .menus{
+    height: 100vh;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 50px 30px 50px;
+    gap:30px;
+  }
+
+  .menu {
+    background-color:#fffdef ;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     text-align: center;
     overflow: hidden;
-  }
+    width: 23%; 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+    padding: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   
+  }
+
   .image-container {
     width: 100%;
     height: 250px;
@@ -161,11 +178,15 @@ body {
     border-top-right-radius: inherit;
     overflow: hidden;
   }
+  
   .image-container img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     object-fit: cover;
   }
+
+ 
   .content {
     padding: 20px 16px;
   }
@@ -174,6 +195,7 @@ body {
     font-size: 26px;
     font-weight: 900;
     margin-bottom: 4px;
+    color:#010101;
   }
   .food-title {
     font-size: 12px;
@@ -187,4 +209,16 @@ body {
     font-size: 14px;
     letter-spacing: 1px;
     color: #9e9e9e;
+  }
+
+  @media (max-width: 1200px) {
+    .menu {
+      width: 48%; /* Jika layar lebih kecil, tampilkan 2 card per baris */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      width: 100%; /* Pada layar kecil, card akan tampil satu per baris */
+    }
   }
