@@ -120,6 +120,12 @@ body {
   
 }
 
+.title .swiper {
+    width: 600px;
+    height: 300px;
+    
+}
+
 .title .sbox {
   display: flex;
   justify-content: center;

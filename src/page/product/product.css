@@ -149,9 +149,10 @@ body {
     height: 100vh;
     color: white;
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    /* grid-auto-flow: column; */
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     padding: 50px 50px 30px 50px;
     gap:30px;
   }
@@ -162,8 +163,8 @@ body {
     flex-direction: column;
     border-radius: 10px;
     text-align: center;
-    overflow: hidden;
-    width: 23%; 
+    /* overflow: hidden; */
+    width: 100%; 
     margin-bottom: 20px; 
     box-sizing: border-box; 
     padding: 10px;  
