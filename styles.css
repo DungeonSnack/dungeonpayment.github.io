@@ -616,6 +616,62 @@ justify-content: center;
 }
 
 
+.subscription {
+  background-image: url('/assets/img/food.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width:100%;
+}
+
+.subscription-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.subscription h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  background-color: #3b2c20;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscription-form button:hover {
+  background-color: #2d2218;
+}
+
+
+
 
 footer {
   position: flex;
