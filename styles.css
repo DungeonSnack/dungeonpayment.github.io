@@ -159,6 +159,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    --swiper-navigation-color: ;
 }
 
 .title .swiper .swiper-wrapper {
@@ -428,6 +429,10 @@ justify-content: center;
   margin-top: 40px;
 }
 
+.steps .swiper  .swiper-wrapper .swiper-slide {
+  width: 60%;
+}
+
 .step {
   flex-basis: 30%;
   padding: 10px;
@@ -438,6 +443,10 @@ justify-content: center;
   width: 40vh; 
   height: auto;
   margin-bottom: 20px;
+}
+
+.step img:hover {
+  zoom: 10%;
 }
 
 .step h3 {
