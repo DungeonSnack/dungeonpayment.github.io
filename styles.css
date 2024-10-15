@@ -144,7 +144,7 @@ body {
   width:160px;
   justify-content: center;
   align-items: center;
-  font-family: ;
+  /* font-family: ; */
   font-weight:900;
   padding:10px 10px;
   background-color:#58355E;
@@ -486,7 +486,7 @@ justify-content: center;
   padding: 20px;
   margin:10px 0px 50px 0px;
   border-radius: 10px;
-  background-color: ;
+  /* background-color: ; */
   box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -578,7 +578,7 @@ justify-content: center;
 
 .how-to-order {
   text-align: center;
-  padding: 100px 70px;
+  padding: 50px 80px;
 }
 
 .how-to-order h2 {
@@ -717,6 +717,11 @@ justify-content: center;
 .testimonial-content p {
   font-size: 14px;
   color: #333;
+}
+
+.testimonial-content .rating {
+  color: gold;
+  font-size: 2vw;
 }
 
 
