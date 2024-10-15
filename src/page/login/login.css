@@ -84,6 +84,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.content-container span:hover{
+  color: #16164d;
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 @media screen and (max-width: 60rem) {
   .container {
@@ -107,6 +115,16 @@ body {
 .form-wrapper {
   width: 75%;
   margin: 0 auto;
+}
+
+.form-wrapper p a {
+  font-style: bold;
+  color: #16164d;
+}
+
+.form-wrapper p a:hover {
+  color: #3671fd;
+  text-decoration: underline;
 }
 
 .logo-container {
