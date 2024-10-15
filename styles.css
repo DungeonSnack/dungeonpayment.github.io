@@ -75,12 +75,23 @@ body {
   align-items: center;
   padding: 15px 50px;
   width: 100%;
-  /* background-color: transparent; */
+  background-color: whitesmoke;
   color: white;
   gap : 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  z-index: 5;
+  top: 0;
 
+}
 
+.navbar .logo {
+color: transparent;
+}
+
+.navbar .logo img {
+  width: 10vw;
+  height: 5vw;
 }
 
 .navbar .menu {
