@@ -64,7 +64,7 @@ body {
     align-items: center;
     padding: 25px 50px;
     width: 100%;
-    background-color: transparent;
+    background-color: background-color: rgba(0, 0, 0, 0.9);    ;
     color: white;
     gap : 30px;
   
@@ -86,17 +86,16 @@ body {
   }
   
   .logo img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 18vh;
     object-fit: cover;
-    border-radius: 50%;
     right: 50px;
    
   }
   
   .navbar .menu-nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 20px;
@@ -120,27 +119,58 @@ body {
   
   .navbar .menu-nav a {
     text-decoration: none;
-    color: white;
+    color: #EC0B43;
     font-size: 20px;
     font-weight: 500;
     transition: 0.3s;
+    margin-left: 20px;
+    position: relative; 
+    margin-right:50px;
+    padding: 5px 0px 0px 0px;
+    transition: color 0.3s ease;
   }
+  
+  .navbar .menu-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #EC0B43; 
+    transition: width 0.3s ease;
+  }
+  
+  .navbar .menu-nav a:hover::after {
+    width: 100%; 
+  }
+  
+  .navbar .menu-nav a:hover {
+    color: #EC0B43; 
+  }
+  
   
   .tombol-login {
     display: flex;
-    justify-content: right;
-    align-items: right;
-    font-family: Poppins, sans-serif;
+    width:160px;
+    justify-content: center;
+    align-items: center;
+    font-family: ;
     font-weight:900;
-    padding:10px 30px;
-    background-color:#d0cece;
+    padding:10px 10px;
+    background-color:#58355E;
     border-radius:10px;
     cursor: pointer;
     transition: 0.5s ease;
   }
   
   .tombol-login:hover {
-    background-color: #010101;
+    background-color: #331f37;
+    
+  }
+  
+  .tombol-login a{
+    color:#ffff;
     
   }
 
