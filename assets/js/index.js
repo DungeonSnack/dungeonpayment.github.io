@@ -61,3 +61,19 @@ function toggleDescription(id) {
   }
 }
 
+// Simulasi status login, ubah menjadi true jika pengguna sudah login
+var isLoggedIn = false;
+
+function checkLogin() {
+    if (!isLoggedIn) {
+        console.log("Anda harus login terlebih dahulu untuk memesan.");
+        alert("Silakan login terlebih dahulu untuk memesan.");
+    } else {
+        // Jika sudah login, proses pemesanan bisa dilanjutkan
+        console.log("Proses pemesanan...");
+        alert("Pemesanan berhasil!");
+        // Tambahkan kode pemesanan di sini
+    }
+}
+
+
