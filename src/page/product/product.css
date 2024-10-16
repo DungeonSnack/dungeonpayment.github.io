@@ -57,6 +57,21 @@ body {
     background-attachment: fixed;
   }
 
+  .hero2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("/assets/img/drink_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+  }
+
 
 .navbar {
     display: flex;
@@ -240,7 +255,52 @@ body {
     font-size: 14px;
     letter-spacing: 1px;
     color: #9e9e9e;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Membatasi deskripsi menjadi 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
+  .toggle-btn {
+    color: #ff9900;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+  .price {
+    display: block !important;
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+    margin-top:15px;
+    color: #333 !important;
+}
+
+
+  .order-btn {
+    background-color: #ceac23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #b38b1e;
+}
+
 
   @media (max-width: 1200px) {
     .menu {
