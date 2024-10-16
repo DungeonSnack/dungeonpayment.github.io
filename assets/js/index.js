@@ -47,3 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Scroll ke posisi yang diinginkan (misalnya 100px dari atas)
   window.scrollTo(0, 50); // Ubah angka sesuai kebutuhan
 });
+
+function toggleDescription(id) {
+  var desc = document.getElementById("desc" + id);
+  var toggleBtn = document.getElementById("toggle-btn" + id);
+
+  if (desc.style.webkitLineClamp === "3") {
+      desc.style.webkitLineClamp = "unset"; // Menampilkan seluruh teks
+      toggleBtn.innerText = "Lihat lebih sedikit";
+  } else {
+      desc.style.webkitLineClamp = "3"; // Membatasi kembali ke 3 baris
+      toggleBtn.innerText = "Lihat lebih banyak";
+  }
+}
+
