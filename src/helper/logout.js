@@ -1,38 +1,27 @@
-function changeToLogout() {
-    const loginButton = document.getElementById("loginButton");
-    
-    // Ubah tulisan tombol menjadi Log Out dan ubah href agar log out saat diklik
-    loginButton.textContent = "Log Out";
-    loginButton.href = "#";  // Hilangkan link saat Log Out
-    
-    // Tambahkan event listener untuk logout
-    loginButton.addEventListener("click", function(event) {
-        event.preventDefault();
-        logout();
-    });
-}
-
-function logout() {
-    // Proses log out
-    alert("Anda telah berhasil log out");
-
-    // Ubah kembali tombol menjadi Sign In dan kembalikan href
-    const loginButton = document.getElementById("loginButton");
-    loginButton.textContent = "Sign In";
-    loginButton.href = "./src/page/login/login.html";  // Kembalikan ke halaman login
-
-    // Hapus status login dari localStorage
-    localStorage.removeItem("isLoggedIn");
-
-    // Redirect ke halaman lain setelah log out (optional)
-    window.location.replace("/index.html");
-}
-
-// Cek apakah pengguna sudah login sebelumnya
-window.onload = function() {
+function checkLoginStatus() {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn === "true") {
+
+    const loginButton = document.getElementById("loginButton");
+    
+    if (isLoggedIn) {
         // Jika sudah login, ubah tombol menjadi Log Out
-        changeToLogout();
+        loginButton.textContent = "Log Out";
+        loginButton.href = "#"; // Mengosongkan href agar tidak redirect
+        
+        loginButton.addEventListener("click", function () {
+            // Logika log out
+            localStorage.removeItem("isLoggedIn");
+            alert("Logout berhasil");
+            window.location.replace("/index.html");
+        });
+    } else {
+        // Jika belum login, tetap Sign In
+        loginButton.textContent = "Sign In";
+        loginButton.href = "./src/page/login/login.html";
     }
-};
+}
+
+// Menjalankan pengecekan login status saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+    checkLoginStatus();
+});
