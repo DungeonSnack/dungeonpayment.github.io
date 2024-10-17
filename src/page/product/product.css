@@ -162,6 +162,23 @@ body {
   }
 
 
+  .hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("/assets/img/foods.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-attachment: fixed;
+  }
+
+  
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -347,7 +364,7 @@ body {
     letter-spacing: 1px;
     color: #9e9e9e;
     display: -webkit-box;
-    /* -webkit-line-clamp: 3; Membatasi deskripsi menjadi 3 baris */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
