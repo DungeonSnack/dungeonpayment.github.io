@@ -74,14 +74,18 @@ body {
 
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 50px;
-    width: 100%;
-    background-color: background-color: rgba(0, 0, 0, 0.9);    ;
-    color: white;
-    gap : 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  width: 100%;
+  background-color: whitesmoke;
+  color: white;
+  gap: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  z-index: 5;
+  top: 0;
   
   }
 
@@ -170,7 +174,7 @@ body {
     width:160px;
     justify-content: center;
     align-items: center;
-    font-family: ;
+    /* font-family: ; */
     font-weight:900;
     padding:10px 10px;
     background-color:#58355E;
@@ -256,7 +260,7 @@ body {
     letter-spacing: 1px;
     color: #9e9e9e;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Membatasi deskripsi menjadi 3 baris */
+    /* -webkit-line-clamp: 3; Membatasi deskripsi menjadi 3 baris */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
