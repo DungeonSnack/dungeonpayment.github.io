@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
   // Scroll ke posisi yang diinginkan (misalnya 100px dari atas)
   window.scrollTo(0, 50); // Ubah angka sesuai kebutuhan
-});
+});sssss
 
 function toggleDescription(id) {
   var desc = document.getElementById("desc" + id);

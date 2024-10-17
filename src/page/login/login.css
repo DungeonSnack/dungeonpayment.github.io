@@ -6,6 +6,11 @@
   --primary: hsl(222, 98%, 60%);
   --primary-lighter: hsl(240, 33%, 86%);
   --primary-gradient: linear-gradient(to right, #3671fd, #6f31ff);
+  --primary-color: #ec0b43;
+  --secondary-color: #58355e;
+  --teks-color-1: #f9ed5b;
+  --teks-color-2: #acff6c;
+  --teks-color-3: #7ae7c7;
 }
 
 *,
@@ -79,7 +84,7 @@ body {
   margin-bottom: 1rem;
 }
 .content-container span {
-  background: var(--primary-gradient);
+  background: var(--teks-color-1);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -128,7 +133,7 @@ body {
 }
 
 .logo-container {
-  width: 5rem;
+  width: 10rem;
   height: 5rem;
   margin-bottom: 2.2rem;
 }
@@ -217,7 +222,7 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 .remember-me input:checked {
-  background: var(--primary-gradient);
+  background: var(--primary-color);
 }
 
 .remember-me label {
@@ -247,7 +252,7 @@ input[type="checkbox"]:checked::before {
 
 .login-btn {
   color: white;
-  background: var(--primary-gradient);
+  background: var(--primary-color);
 }
 .login-btn:hover {
   opacity: 0.9;
