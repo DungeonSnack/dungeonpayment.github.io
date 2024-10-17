@@ -31,27 +31,29 @@
           <h2>Welcome Brok 👋🏻</h2>
           <p>Masukkin Akun lu kalau ada, Atau <a href="register.html">Daftar Disini!</a></p>
 
-          <div class="input-container">
-            <div class="form-group">
-              <label for="email" >Email</label>
-              <input type="email" id="email" autocomplete="off">
+          <form class="login-form">
+            <div class="input-container">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="password" >Password</label>
-              <input type="password" id="password">
+          
+            <div class="remember-forgot">
+              <div class="remember-me">
+                <input type="checkbox" value="remember-me" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label>
+              </div>
+          
+              <a href="#">Forgot password?</a>
             </div>
-          </div>
-
-          <div class="remember-forgot">
-            <div class="remember-me">
-              <input type="checkbox" value="remember-me" id="remember-me">
-              <label for="remember-me">Remember me</label>
-            </div>
-
-            <a href="#">Forgot password?</a>
-          </div>
-
-          <button class="login-btn">Log In</button>
+          
+            <button type="submit" class="login-btn">Log In</button>
+          </form>
 
           <div class="or-divider">or</div>
 
@@ -62,6 +64,7 @@
         </div>
       </div>
     </section>
+    <script src="./../../helper/login.js" type="module"></script>
   </body>
 </html>
 <!--  To DO Next, Add Required Form
