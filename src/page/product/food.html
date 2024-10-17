@@ -1,150 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="product.css">
-    <link rel="icon" href="../../../assets/img/logodugeon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="icon"
+      href="../../../assets/img/logodugeon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Makanan😍</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="hero">
-        <div class="navbar">
-        <div class="logo"><img src="../../../assets/img/truelogo.png" alt="logo"></div>
-        <button class="hamburger"> <span></span> <span></span> <span></span> </button>
-        <div class="menu-nav"> 
-                <a href="/index.html">Home</a>
-                <a href="#svc">Product</a>
-                <a href="#about">About</a> 
-                <a href="#footer">Contact</a>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../../../assets/img/truelogo.png" alt="logo" />
+        </div>
+        <button class="hamburger">
+          <span></span> <span></span> <span></span>
+        </button>
+        <div class="menu-nav">
+          <a href="/index.html">Home</a>
+          <a href="#svc">Product</a>
+          <a href="#about">About</a>
+          <a href="#footer">Contact</a>
         </div>
         <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
       </div>
-    </div>
+     
 
     <div class="menus">
-        <div class="menu">
+      <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food1.png" alt="Profile Photo">
+          <img src="../../../assets/img/food1.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Machees</h2>
           <p class="food-title">Macaroni and cheess</p>
           <p class="description" id="desc1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn1" onclick="toggleDescription(1)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn1"
+            onclick="toggleDescription(1)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food2.png" alt="Profile Photo">
+          <img src="../../../assets/img/food2.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Spageti</h2>
           <p class="food-title">spageti with tomato souce</p>
           <p class="description" id="desc2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn2" onclick="toggleDescription(2)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn2"
+            onclick="toggleDescription(2)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food3.png" alt="Profile Photo">
+          <img src="../../../assets/img/food3.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Beef</h2>
           <p class="food-title">beef grill</p>
           <p class="description" id="desc3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn3" onclick="toggleDescription(3)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn3"
+            onclick="toggleDescription(3)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food4.png" alt="Profile Photo">
+          <img src="../../../assets/img/food4.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Sushi</h2>
           <p class="food-title">Fresh fish</p>
           <p class="description" id="desc4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn4" onclick="toggleDescription(4)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn4"
+            onclick="toggleDescription(4)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food5.png" alt="Profile Photo">
+          <img src="../../../assets/img/food5.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Salad</h2>
           <p class="food-title">eat vegetables for healty</p>
           <p class="description" id="desc5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn5" onclick="toggleDescription(5)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn5"
+            onclick="toggleDescription(5)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food6.png" alt="Profile Photo">
+          <img src="../../../assets/img/food6.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Spaggeti beef</h2>
           <p class="food-title">Spaggeti with beef ball</p>
           <p class="description" id="desc6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn" onclick="toggleDescription(6)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn"
+            onclick="toggleDescription(6)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food7.png" alt="Profile Photo">
+          <img src="../../../assets/img/food7.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Tofu</h2>
           <p class="food-title">Idk</p>
           <p class="description" id="desc7">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn7" onclick="toggleDescription(7)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn7"
+            onclick="toggleDescription(7)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food6.png" alt="Profile Photo">
+          <img src="../../../assets/img/food6.png" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Spaggeti beef</h2>
           <p class="food-title">Spaggeti with beef ball</p>
           <p class="description" id="desc8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn8" onclick="toggleDescription(8)">Lihat lebih banyak</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn8"
+            onclick="toggleDescription(8)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
     </div>
 
-<script src="../../../assets/js/index.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./../../../assets/js/food.js"></script>
+  </body>
 </html>
