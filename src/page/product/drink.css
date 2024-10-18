@@ -1,0 +1,11 @@
+.hero .swiper {
+    margin-top: 4vw;
+    width: 95%;
+    height: 70vh;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --swiper-navigation-color: black;
+  }
