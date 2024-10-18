@@ -57,75 +57,7 @@ body {
     background-attachment: fixed;
   }
 
-  /* .hero .swiper {
-    margin-top: 4vw;
-    width: 95%;
-    height: 70vh;
-    border-radius: 30px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --swiper-navigation-color: black;
-  } */
   
-  /* .hero .swiper .swiper-wrapper {
-    width: 100%;
-    height: inherit;
-  } */
-  
- 
-  
-  .hero .swiper .swiper-wrapper .swiper-slide:hover img,
-  .hero .swiper .swiper-wrapper .swiper-slide:hover .overlay {
-    opacity: 1;
-    filter: brightness(0.5);
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
-    color: white; /* Warna teks */
-    display: flex; /* Menggunakan flexbox untuk memusatkan teks */
-    align-items: center; /* Memusatkan secara vertikal */
-    justify-content: center; /* Memusatkan secara horizontal */
-    opacity: 0; /* Awalnya tersembunyi */
-    transition: opacity 0.3s; /* Efek transisi */
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge {
-    position: absolute;
-    top: 7px; /* Jarak dari atas */
-    right: 10px; /* Jarak dari kanan */
-    /* background-color: red; Warna latar belakang */
-    color: gold; /* Warna teks */
-    padding: 5px 10px; /* Ruang di dalam badge */
-    border-radius: 5px; /* Sudut melingkar */
-    transform: rotate(10deg); /* Memutar badge */
-    font-weight: bold; /* Teks tebal */
-    z-index: 10; /* Pastikan badge di atas overlay */
-    transition: background-color 0.3s; /* Efek transisi pada warna latar */
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    opacity: 0;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
-    background-color: darkred;
-  }
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    background-color: darkred;
-    opacity: 1;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide:hover a {
-    display: block;
-  }
 
   .hero2 {
     display: flex;
@@ -142,23 +74,6 @@ body {
     background-attachment: fixed;
   }
 
-
-  .hero {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("/assets/img/foods.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    background-attachment: fixed;
-  }
-
-  
 
 .navbar {
   display: flex;
@@ -345,8 +260,7 @@ body {
     letter-spacing: 1px;
     color: #9e9e9e;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    /* -webkit-line-clamp: 3; Membatasi deskripsi menjadi 3 baris */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
