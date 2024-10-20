@@ -817,6 +817,81 @@ body {
   background-color: #2d2218;
 }
 
+.contact-info {
+  background-color: #1a2a38;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 40%;
+  margin-right: 20px;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contact-info a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #e67361;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #d96555;
+}
+
+/* Phone number validation message */
+.contact-form input:invalid + .invalid-message {
+  color: red;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #1a2a38;
+}
+
+.map {
+  margin-top: 20px;
+}
+
 footer {
   position: flex;
   left: 0;
