@@ -330,9 +330,9 @@ body {
   .description {
     font-size: 14px;
     letter-spacing: 1px;
-    color: #9e9e9e;
+    color: #9e9e9e; 
     display: -webkit-box;
-    /* -webkit-line-clamp: 3; Membatasi deskripsi menjadi 3 baris */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
