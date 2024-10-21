@@ -15,16 +15,21 @@
 </head>
 <body>
   <div class="navbar">
-    <div class="logo"><img src="../../../assets/img/truelogo.png" alt="logo"></div>
-    <button class="hamburger"> <span></span> <span></span> <span></span> </button>
-    <div class="menu-nav"> 
-            <a href="/index.html">Home</a>
-            <a href="#svc">Product</a>
-            <a href="#about">About</a> 
-            <a href="#footer">Contact</a>
+    <div class="logo">
+      <img src="../../../assets/img/truelogo.png" alt="logo" />
+    </div>
+    <button class="hamburger">
+      <span></span> <span></span> <span></span>
+    </button>
+    <div class="menu-nav">
+      <a href="/index.html">Home</a>
+      <a href="/index.html#svc">Product</a>
+      <a href="/index.html#about">About</a>
+      <a href="/index.html#contact">Contact</a>
     </div>
     <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
   </div>
+
     <div class="hero2">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -211,9 +216,25 @@
       </div>
     </div>
 
+     <!-- Modal Login Alert -->
+     <div class="modal" id="modalAlert">
+      <div class="modal-konten">
+          <span class="tutup-btn" id="tutupModal">&times;</span>
+          <div class="modal-header">
+              <div class="icon-check">
+                &#215;
+              </div>
+              <p class="modal-teks">
+                  Anda harus login terlebih dahulu untuk melakukan pemesanan.
+                  <br><a href="/src/page/login/login.html" id="loginLink" class="modal-link">Login Sekarang</a>
+              </p>
+          </div>
+      </div>
+  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/assets/js/drink.js"></script>
-    <script src="./../../../assets/js/index.js"></script>
+    
+    <script src="/assets/js/index.js"></script>
 
 </body>
 

@@ -26,8 +26,8 @@
       <div class="menu-nav">
         <a href="/index.html">Home</a>
         <a href="/index.html#svc">Product</a>
-        <a href="#about">About</a>
-        <a href="#footer">Contact</a>
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#contact">Contact</a>
       </div>
       <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
     </div>
@@ -86,9 +86,9 @@
     </div>
 
     <div class="menus">
-      <div class="menu">
+       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/food1.png" alt="Profile Photo" />
+          <img src="../../../assets/img/food1.png" alt="Makaroni Keju" />
         </div>
         <div class="content">
           <h2 class="food-name">MAJU - Makaroni Keju <span>&#x1F5FF;</span></h2>
@@ -110,7 +110,9 @@
             Pesan Sekarang
           </button>
         </div>
-      </div>
+    </div>
+
+   
       <div class="menu">
         <div class="image-container">
           <img src="../../../assets/img/food2.png" alt="Profile Photo" />
@@ -285,6 +287,22 @@
         </div>
       </div>
     </div>
+
+     <!-- Modal Login Alert -->
+     <div class="modal" id="modalAlert">
+      <div class="modal-konten">
+          <span class="tutup-btn" id="tutupModal">&times;</span>
+          <div class="modal-header">
+              <div class="icon-check">
+                &#215;
+              </div>
+              <p class="modal-teks">
+                  Anda harus login terlebih dahulu untuk melakukan pemesanan.
+                  <br><a href="/src/page/login/login.html" id="loginLink" class="modal-link">Login Sekarang</a>
+              </p>
+          </div>
+      </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./../../../assets/js/index.js"></script>
