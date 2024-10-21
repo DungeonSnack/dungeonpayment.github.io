@@ -57,22 +57,22 @@
 
   <body>
     <div class="navbar">
-      <div class="logo"><img src="./assets/img/truelogo.png" alt="logo" /></div>
+      <div class="logo"><img src="./assets/img/truelogo.png " alt="logo" /></div>
       <button class="hamburger">
         <span></span> <span></span> <span></span>
       </button>
       <div class="menu">
-        <a href="index.html">Home</a>
+        <a href="#hero">Home</a>
         <a href="#svc">Product</a>
         <a href="#about">About</a>
-        <a href="#footer">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="tombol-login">
+      <button class="tombol-login">
         <a href="./src/page/login/login.html" id="loginButton">Sign In</a>
-      </div>
+      </button>
     </div>
 
-    <div class="hero">
+    <div class="hero" id="hero">
       <div class="title">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -468,46 +468,37 @@
       </div>
     </div>
 
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p><strong>Katy Fard</strong></p>
-      <p>Email Address: <a href="mailto:wp@katyfard.com">wp@katyfard.com</a></p>
-      <p>Phone Number: +0987654321</p>
-      <p>Address: Canada, British Columbia</p>
-
-      <!-- Map Image -->
-      <div class="map">
-          <img src="https://via.placeholder.com/400x200" alt="Map Image">
+    <div class="contact" id="contact">
+      <div class="contact-info">
+          <h1>Let's Talk</h1>
+          <p>Butuh solusi untuk memperluas bisnis UMKM Anda? DungeonSnack selalu terbuka untuk mendengar<br> ide Anda dan membantu mewujudkannya.<br> Bersama, kita bisa membawa produk lokal<br> lebih dekat ke masyarakat luas. Hubungi kami,<br> dan mari kita mulai percakapan!</p>
+          <div class="contact-details">
+              <h1>Email</h1>
+              <p><a href="mailto:beebs@gmail.com">DungeonSnack@gmail.com</a></p>
+              <h1>Socials</h1>
+              <ul>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Facebook</a></li>
+              </ul>
+          </div>
       </div>
-
-      <!-- Social Media Icons -->
-      <div class="social-icons">
-          <a href="#"><img src="https://img.icons8.com/ios/452/whatsapp--v1.png" alt="WhatsApp" width="30"></a>
-          <a href="#"><img src="https://img.icons8.com/ios/452/telegram-app.png" alt="Telegram" width="30"></a>
-          <a href="#"><img src="https://img.icons8.com/ios/452/facebook-new.png" alt="Facebook" width="30"></a>
-          <a href="#"><img src="https://img.icons8.com/ios/452/linkedin.png" alt="LinkedIn" width="30"></a>
+      <div class="contact-form">
+          <form action="#" method="post">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+              
+              <button type="submit">Submit</button>
+          </form>
       </div>
   </div>
-
-  <!-- Contact Form Section -->
-  <div class="contact-form" id="contact">
-      <form action="#">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-          <p class="invalid-message">Enter a valid number</p>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <input type="submit" value="Submit">
-      </form>
-  </div>
+  
 
     <footer id="footer">
       <div class="container">

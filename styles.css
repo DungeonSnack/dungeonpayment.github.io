@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 :root {
   --primary-color: #ec0b43;
   --secondary-color: #58355e;
@@ -817,79 +817,90 @@ body {
   background-color: #2d2218;
 }
 
-.contact-info {
-  background-color: #1a2a38;
-  color: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 40%;
-  margin-right: 20px;
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  gap:40px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+  margin-bottom: 20px;
+  margin-top:50px;
+
 }
 
-.contact-info h2 {
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.contact-info a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.contact-form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  width: 40%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
+input, select, textarea {
+  margin-bottom: 20px;
   padding: 10px;
-  margin: 10px 0;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
 }
 
-.contact-form input[type="submit"] {
-  background-color: #e67361;
+button {
+  padding: 15px;
+  font-size: 16px;
+  background-color: black;
   color: white;
   border: none;
   cursor: pointer;
-  padding: 15px;
+  border-radius:30px;
 }
 
-.contact-form input[type="submit"]:hover {
-  background-color: #d96555;
+button:hover {
+  background-color: #333;
+}
 }
 
-/* Phone number validation message */
-.contact-form input:invalid + .invalid-message {
-  color: red;
-  font-size: 14px;
+.contact-info {
+  flex: 1;
+  margin-right: 50px;
+  
 }
 
-.social-icons {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  margin-top: 20px;
+.contact-info h1 {
+  font-size: 36px;
+  margin-top:50px;
+  margin-bottom: 20px;
+  color:var(--teks-color-2);
+  font-family: "Abril Fatface", serif;
+
+
 }
 
-.social-icons a {
-  font-size: 24px;
-  color: #1a2a38;
+.contact-info p {
+  margin-bottom: 20px;
+  color: #555;
 }
 
-.map {
-  margin-top: 20px;
+.contact-details p,
+.contact-details a {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details ul li {
+  margin-bottom: 10px;
+}
+
+.contact-details ul li a {
+  text-decoration: underline;
+  color: black;
+}
+
+.contact-form {
+  flex: 1;
 }
 
 footer {
