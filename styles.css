@@ -100,8 +100,84 @@ body {
   gap: 20px;
 }
 
+/* Gaya untuk dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  font-size: 16px;
+}
+
+ 
+.dropdown-content {
+  background-color: #fceef1;
+  font-size: 10px;
+  display: none;
+  border-radius: 20px;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding:25px 0px 20px 10px;
+  opacity: 0;  
+  transform: translateY(-10px);  
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;  
+}
+
+ 
+.dropdown-content a {
+  padding: 14px 16px;
+  margin-bottom:10px;
+  text-decoration: none;
+  color: black; 
+  display: block;
+  font-size: 16px; 
+}
+
+ 
+.dropdown-content a:hover {
+  color: white; 
+}
+
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;  
+  transform: translateY(0); 
+}
+
+ 
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);  
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ec0b43; /* Warna teks loading */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 9999; /* Pastikan berada di atas elemen lain */
+}
+
+
+
 .hamburger {
-  display: none; /* Hide by default */
+  display: none;  
   cursor: pointer;
   background: none;
   border: none;
@@ -111,13 +187,14 @@ body {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: white; /* Adjust color as needed */
+  background-color: white; 
   margin: 5px 0;
 }
 
+
 .navbar .menu a {
   text-decoration: none;
-  color: #ec0b43;
+  color: #ec0b43; 
   font-size: 20px;
   font-weight: 500;
   transition: 0.3s;
@@ -127,6 +204,12 @@ body {
   padding: 5px 0px 0px 0px;
   transition: color 0.3s ease;
 }
+
+
+.navbar .menu a:hover {
+  color: #ec0b43; 
+}
+
 
 .navbar .menu a::after {
   content: "";
@@ -141,10 +224,6 @@ body {
 
 .navbar .menu a:hover::after {
   width: 100%;
-}
-
-.navbar .menu a:hover {
-  color: #ec0b43;
 }
 
 .tombol-login {

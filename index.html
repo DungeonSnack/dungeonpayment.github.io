@@ -57,13 +57,22 @@
 
   <body>
     <div class="navbar">
-      <div class="logo"><img src="./assets/img/truelogo.png " alt="logo" /></div>
+      <div class="logo"><img src="./assets/img/truelogo.png" alt="logo" /></div>
       <button class="hamburger">
         <span></span> <span></span> <span></span>
       </button>
       <div class="menu">
         <a href="#hero">Home</a>
-        <a href="#svc">Product</a>
+        
+        <!-- Dropdown untuk Product -->
+        <div class="dropdown">
+          <a href="#svc" class="dropbtn">Product</a>
+          <div class="dropdown-content">
+            <a href="/src/page/product/food.html">Makanan</a>
+            <a href="/src/page/product/drink.html">Minuman</a>
+          </div>
+        </div>
+        
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -71,6 +80,9 @@
         <a href="./src/page/login/login.html" id="loginButton">Sign In</a>
       </button>
     </div>
+
+   
+
 
     <div class="hero" id="hero">
       <div class="title">
