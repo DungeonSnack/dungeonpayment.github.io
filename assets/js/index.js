@@ -62,16 +62,6 @@ var marker = new H.map.Marker({lat: 49.2827, lng: -123.1207});
 map.addObject(marker);
 
 
-// Fungsi untuk toggle deskripsi
-function toggleDescription(id) {
-  var desc = document.getElementById('desc' + id);
-  if (desc.style.display === "none") {
-      desc.style.display = "block";
-  } else {
-      desc.style.display = "none";
-  }
-}
-
 // Fungsi untuk mengecek login
 function checkLogin() {
   var isLoggedIn = false; // Set ini dengan logika yang sebenarnya, misalnya dari sesi atau cookie
@@ -117,6 +107,7 @@ function tampilkanModal() {
       }
   };
 }
+
 
 
 
