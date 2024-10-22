@@ -23,7 +23,13 @@
     </button>
     <div class="menu-nav">
       <a href="/index.html">Home</a>
-      <a href="/index.html#svc">Product</a>
+      <div class="dropdown">
+        <a href="#svc" class="dropbtn">Product</a>
+        <div class="dropdown-content">
+          <a href="/src/page/product/food.html">Makanan</a>
+          <a href="/src/page/product/drink.html">Minuman</a>
+        </div>
+      </div>
       <a href="/index.html#about">About</a>
       <a href="/index.html#contact">Contact</a>
     </div>
@@ -83,7 +89,7 @@
       </div>
     </div>
 
-    <div class="menus">
+    <div class="menus" id="minuman">
         <div class="menu">
             <div class="image-container">
                 <img src="../../../assets/img/drink_2.jpg" alt="Profile Photo">
@@ -233,7 +239,7 @@
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+    <script src="/src/helper/helper.js"></script>
     <script src="/assets/js/index.js"></script>
 
 </body>
