@@ -40,9 +40,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId); // Menemukan elemen target
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth' // Efek scroll halus
-                    });
+                    // Melakukan smooth scroll yang lebih lambat
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY; // Posisi target
+                    const startPosition = window.scrollY; // Posisi saat ini
+                    const distance = targetPosition - startPosition; // Jarak yang harus digulir
+                    const duration = 2000; // Durasi scroll dalam ms (misal 2000 ms = 2 detik)
+                    let startTime = null;
+
+                    function animation(currentTime) {
+                        if (!startTime) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const progress = Math.min(timeElapsed / duration, 1); // Progres antara 0 dan 1
+                        const ease = easeInOutCubic(progress); // Fungsi easing untuk smooth
+                        window.scrollTo(0, startPosition + distance * ease); // Melakukan scroll
+
+                        if (timeElapsed < duration) {
+                            requestAnimationFrame(animation); // Lanjutkan animasi
+                        }
+                    }
+
+                    // Fungsi easing
+                    function easeInOutCubic(t) {
+                        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+                    }
+
+                    requestAnimationFrame(animation); // Memulai animasi
                 }
             } else {
                 // Tautan yang mengarah ke halaman lain

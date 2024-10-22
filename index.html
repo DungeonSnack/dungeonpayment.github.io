@@ -82,7 +82,7 @@
     </div>
  <!-- Elemen Loading -->
  <div id="loading" class="loading" style="display: none;">
-  <p>Loading...</p>
+  <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>
    
 
@@ -158,7 +158,10 @@
             </p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -176,7 +179,10 @@
             </p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -194,12 +200,32 @@
             </p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div>
+       <!-- Modal Login Alert -->
+     <div class="modal" id="modalAlert">
+      <div class="modal-konten">
+          <span class="tutup-btn" id="tutupModal">&times;</span>
+          <div class="modal-header">
+              <div class="icon-check">
+                &#215;
+              </div>
+              <p class="modal-teks">
+                  Anda harus login terlebih dahulu untuk melakukan pemesanan.
+                  <br><a href="/src/page/login/login.html" id="loginLink" class="modal-link">Login Sekarang</a>
+              </p>
+          </div>
+      </div>
+    </div>
+
 
     <div class="svc" id="svc">
       <h1 class="special-menu">
@@ -208,7 +234,7 @@
       <div class="services">
         <div class="service">
           <div class="cont_img">
-            <a href="./src/page/product/food.html">
+            <a href="/src/page/product/food.html">
               <img src="./assets/img/food.jpeg" alt="Food" />
             </a>
           </div>
@@ -297,7 +323,10 @@
               Gabungan Cita Rasa Yang Memanjakan Lidah Kamu Sampai keujung Sarafnya!</p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -314,7 +343,10 @@
               Yang Siap Menggetarkan Jiwa dan Perut Kamu 😍😍</p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -331,7 +363,10 @@
               Rasa Yang Menyayat Indra Perasa Sampai ke Ujungnya!</p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -349,7 +384,10 @@
             </p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -365,7 +403,10 @@
               tetapi masih menikmati hidup.  </p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
@@ -381,11 +422,15 @@
                Setiap Tegukan Mengingatkan Bahwa Hidup Santai, Nikmati Aja, Nggak Usah Buru-Buru.</p>
             <div class="menu-footer">
               <span class="price">12 K</span>
-              <button class="add-to-cart"><i class="cart-icon">🛒</i></button>
+              <button class="add-to-cart order-btn" onclick="checkLogin()"><i class="cart-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+              </svg>
+              </i></button>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
 
     <div class="testimonials" id="testimonials">
