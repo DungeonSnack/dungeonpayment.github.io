@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DungeonPay - Online Payments for Everyone</title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DungeonPay.</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="register-btn">
+            <a href="#">Register</a>
+        </div>
+        <div class="auth-buttons">
+           
+            <!-- Ini akan muncul jika user belum login -->
+            <a href="#" class="signin-btn" id="sign-in-btn">Sign in</a>
+        
+            <!-- Ini akan muncul jika user telah login -->
+            <div class="profile" id="profile-section" style="display: none;">
+                <img src="user-profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <p>💰 Mulai pembayaran yang aman disini</p>
+            <h2>Pembayaran ke siapa saja secara <span style="color: var(--primary-color);">Online</span></h2>
+            <p>Make more sales by giving customers the ability to pay the way they love it.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn green-btn">Get Started</a>
+                <a href="#" class="btn">Download App</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/img/Payment_page.png" alt="Visa Card">
+        </div>
+    </section>
+
+    <section class="payment-methods">
+        <p>Pembayaran Dengan beberapa layanan</p>
+        <div class="methods">
+            <img src="/assets/img/bca.png" alt="bca">
+            <img src="/assets/img/Apay.png" alt="apay">
+            <img src="/assets/img/bni.png" alt="bni">
+            <img src="/assets/img/bri.png" alt="bri">
+            <img src="/assets/img/gpay.png" alt="googlepay">
+            <img src="/assets/img/mandiri.png" alt="mandiri">
+            <img src="/assets/img/mastercard.png" alt="mastercard">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DungeonPay. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/assets/js/payment.js"></script>
+</body>
+</html>
