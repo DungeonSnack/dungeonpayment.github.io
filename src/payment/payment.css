@@ -163,6 +163,40 @@ nav ul li a {
 }
 
 
+/* Menjadikan gambar responsif */
+.image-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mengatur jarak antara gambar dan teks sekitarnya */
+.platform-overview .col-right img,
+.login-expand-section .col-left img {
+    margin: 20px 0;
+}
+
+/* Layout Flexbox */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 15px 0px 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.col-left, .col-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
