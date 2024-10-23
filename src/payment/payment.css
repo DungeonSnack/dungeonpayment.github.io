@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --primary-color: #ec0b43;
+    --secondary-color: #58355e;
+    --teks-color-1: #f9ed5b;
+    --teks-color-2: #acff6c;
+    --teks-color-3: #7ae7c7;
+    
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.register-btn a {
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+}
+
+.signin-btn {
+    background-color: #333;
+    color: #fff;
+
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px 100px 50px;
+    background-color: #f8f9fa;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight:900;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight:900;
+    color:#7c7c7c;
+}
+.cta-buttons {
+    margin: 105px 15px 0px 0px;
+}
+.cta-buttons .btn {
+    padding: 25px 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007b5e;
+    border-radius: 20px;
+    margin: 105px 15px 0px 0px;
+    
+}
+
+.green-btn {
+    background-color: #28a745;
+    margin: 105px 15px 0px 0px;
+}
+
+.hero-image img {
+    width: 105vh;
+    height: auto;
+}
+
+.payment-methods {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.payment-methods p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.methods img {
+    margin: 0 15px;
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: #000000;
+}
