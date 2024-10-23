@@ -94,12 +94,18 @@ nav ul li a {
     background-color: #007b5e;
     border-radius: 20px;
     margin: 105px 15px 0px 0px;
+    transition:ease-in-out .4s;
     
 }
 
 .green-btn {
     background-color: #28a745;
     margin: 105px 15px 0px 0px;
+    
+}
+
+.cta-buttons .btn:hover { /* Selector yang benar untuk hover */
+    background-color: #18b93c; /* Warna latar berubah saat hover */
 }
 
 .hero-image img {
@@ -108,20 +114,54 @@ nav ul li a {
 }
 
 .payment-methods {
-    padding: 50px 0;
-    text-align: center;
+    padding: 90px 0px 0px 0px;
+    text-align: left;
 }
 
 .payment-methods p {
     font-size: 18px;
-    margin-bottom: 20px;
+    font-weight:400;
 }
 
 .methods img {
-    margin: 0 15px;
+    margin: 0 10px;
     width: 50px;
     height: auto;
 }
+
+.trusted-clients {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.trusted-clients h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Jarak antara logo */
+    flex-wrap: wrap; /* Agar logo responsive */
+    max-width: 1000px; /* Lebar maksimal */
+    margin: 0 auto; /* Pusatkan elemen */
+}
+
+.clients-logos img {
+    width: 120px; /* Ukuran logo bisa diatur sesuai kebutuhan */
+    height: auto;
+    opacity: 0.7; /* Memberikan efek transparansi pada logo */
+    transition: opacity 0.3s ease;
+}
+
+.clients-logos img:hover {
+    opacity: 1; /* Efek hover mengembalikan ke opacity penuh */
+}
+
 
 footer {
     text-align: center;
