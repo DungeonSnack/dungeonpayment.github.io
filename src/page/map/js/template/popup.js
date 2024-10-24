@@ -4,5 +4,4 @@ Lat  : #LAT#<br>
 X   : #X#<br>
 Y   : #Y#<br>
 HDMS : #HDMS#<br>
-`
-
+`;
