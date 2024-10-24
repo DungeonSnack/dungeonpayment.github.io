@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
     --primary-color: #ec0b43;
@@ -16,8 +17,8 @@
 }
 
 body {
-    font-family: 'poppins', sans-serif;
-    line-height: 1.6;
+    font-family: "Mukta", serif;
+    line-height: 1.4;
 }
 
 header {
@@ -27,11 +28,40 @@ header {
     padding: 20px;
     background-color: #fff;
 }
-
 .logo h1 {
     font-size: 28px;
     color: var(--primary-color);
+    font-family: "poppins", serif;
 }
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
+.logo h1, .logo img {
+    transition: opacity 0.3s ease; /* Efek transisi halus */
+}
+
+.logo-image {
+    display: block;
+    opacity: 0; /* Sembunyikan gambar awalnya */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px; /* Sesuaikan ukuran gambar dengan elemen logo */
+    height: auto;
+    padding:0;
+}
+
+.logo:hover h1 {
+    opacity: 0; /* Sembunyikan teks saat hover */
+}
+
+.logo:hover .logo-image {
+    opacity: 1; /* Tampilkan gambar saat hover */
+}
+
 
 nav ul {
     list-style: none;
@@ -81,19 +111,18 @@ nav ul li a {
 .hero-text p {
     font-size: 18px;
     margin-bottom: 20px;
-    font-weight:900;
+    font-weight:700;
     color:#7c7c7c;
 }
 .cta-buttons {
     margin: 105px 15px 0px 0px;
 }
 .cta-buttons .btn {
-    padding: 25px 25px;
+    padding: 20px 35px;
     text-decoration: none;
     color: #fff;
     background-color: #007b5e;
-    border-radius: 20px;
-    margin: 105px 15px 0px 0px;
+    border-radius: 30px;
     transition:ease-in-out .4s;
     
 }
@@ -105,7 +134,9 @@ nav ul li a {
 }
 
 .cta-buttons .btn:hover { /* Selector yang benar untuk hover */
-    background-color: #18b93c; /* Warna latar berubah saat hover */
+    background-color: #18b93c;
+    padding: 15px 25px;
+    border-radius: 50px;
 }
 
 .hero-image img {
@@ -132,13 +163,13 @@ nav ul li a {
 .trusted-clients {
     text-align: center;
     padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color:#f8f9fa  ;
 }
 
 .trusted-clients h3 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .clients-logos {
@@ -154,7 +185,7 @@ nav ul li a {
 .clients-logos img {
     width: 120px; /* Ukuran logo bisa diatur sesuai kebutuhan */
     height: auto;
-    opacity: 0.7; /* Memberikan efek transparansi pada logo */
+    opacity: 0.6; /* Memberikan efek transparansi pada logo */
     transition: opacity 0.3s ease;
 }
 
@@ -177,6 +208,52 @@ nav ul li a {
     margin: 20px 0;
 }
 
+.platform-overview {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.platform-overview h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.platform-overview p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+}
+
+.login-expand-section {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+}
+
+
 /* Layout Flexbox */
 .container {
     max-width: 1200px;
@@ -194,6 +271,162 @@ nav ul li a {
 .col-left, .col-right {
     flex: 1;
     min-width: 300px;
+}
+
+.cta-section {
+    background-color: #f8f9fa;
+    padding: 50px 300px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-link {
+    background-color: #ff658b;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition:ease-in-out 0.2s
+}
+
+.cta-link:hover {
+    background-color: var(--primary-color);
+}
+
+
+.testimonials-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials-section h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color:var(--primary-color);
+    span {
+        font-size: 22px;
+        color:black;
+        opacity:0.5;
+        margin-bottom: 30px;
+        font-weight:300;
+    }
+}
+
+.container-testi {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:#f9f9f9;
+    padding:50px;
+    border-radius:50px;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+    
+
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 400px;
+    margin: 0 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: #f9f9f9;
+    border-radius: 10p;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.quote-icon {
+    font-size: 7rem; /* Ukuran besar untuk tanda kutip */
+    color: var(--primary-color); /* Warna sesuai kebutuhan */
+    position: absolute;
+    top: -48px; /* Mengatur posisi tanda kutip */
+    left: 20px;
+    font-family: 'Georgia', serif; /* Gunakan font serupa serif untuk tanda kutip */
+}
+
+.star {
+    font-size:80px;
+    position: absolute;
+    padding: 0px 0px 200px 400px;
+    
+}
+.star2 {
+    font-size:60px;
+    position: absolute;
+    padding: 0px 0px 300px 600px;
+    
+}
+
+.testimonial p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.testimonial span {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.carousel button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #e9416b;
+}
+
+.carousel button:hover {
+    color: var(--primary-color);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+    }
+    .carousel {
+        flex-direction: column;
+    }
 }
 
 
