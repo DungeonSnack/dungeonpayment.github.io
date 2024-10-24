@@ -174,7 +174,7 @@ nav ul li a {
 
 .trusted-clients {
     text-align: center;
-    padding: 80px 0;
+    padding: 20px 0;
     background-color:#f8f9fa  ;
 }
 
@@ -441,6 +441,62 @@ nav ul li a {
         flex-direction: column;
     }
 }
+
+.business-finance-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('/assets/img/background-1.png'); /* Path ke gambar */
+    background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+}
+
+.business-finance-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.learn-more-btn {
+    background-color: var(--primary-color); /* Adjust button color */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e9416b; /* Darker shade on hover */
+}
+
+.image-content {
+    margin-top: 20px;
+}
+
+.laptop-image {
+    width: 120vh;
+    max-width: 600px;
+    height: auto;
+}
+
 
 
 footer {
