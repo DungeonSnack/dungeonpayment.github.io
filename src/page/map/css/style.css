@@ -33,6 +33,7 @@ body {
   min-width: 280px;
   position: absolute;
   background: white;
+  display: block;
   padding: 15px;
   border: 1px solid #cccccc;
   border-radius: 4px;

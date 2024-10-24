@@ -1,8 +1,6 @@
 import { map } from './config/peta.js';
 import { 
     onClosePopupClick, 
-    onDeleteMarkerClick, 
-    onSubmitMarkerClick, 
     onMapClick, 
     onMapPointerMove, 
     disposePopover 

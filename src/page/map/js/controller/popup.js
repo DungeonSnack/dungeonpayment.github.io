@@ -12,28 +12,7 @@ export function onClosePopupClick() {
     textBlur('popup-closer');
 }
 
-export function onDeleteMarkerClick() {
-    let idmarker = getValue('idmarker');
-    popupinfo.setPosition(undefined);
-    deleteMarker(idmarker);
-}
 
-export function onSubmitMarkerClick() {
-    let long = getValue('long');
-    let lat = getValue('lat');
-    let name = getValue('name');
-    let volume = getValue('volume');
-    let data = {long,lat,volume};
-    postJSON("https://eoqc0wqfm9sjc6y.m.pipedream.net","Token","dsf9ygf87h98u479y98dj0fs89nfd7",data,afterSubmitCOG);
-    overlay.setPosition(undefined);
-    textBlur('popup-closer');
-    insertMarker(name,long,lat,volume);
-    idmarker.id=idmarker.id+1;
-}
-
-function afterSubmitCOG(result){
-    console.log(result);
-}
 
 function popupInputMarker(evt) {
     let tile = evt.coordinate;

@@ -88,6 +88,8 @@ const places = [
     [107.57567676530189, -6.874328155615692], // Marker 1
     [107.57717560948039, -6.875409662859955], // Marker 2
     [107.582000, -6.877000], // Marker 3
+    [107.575718, -6.874782],
+    [107.575677, -6.874941],
 ];
 
 // Menambahkan marker untuk setiap lokasi di array places
@@ -109,3 +111,9 @@ document.getElementById('popup-closer').onclick = function () {
     popupElement.style.display = 'none';
     return false;
 };
+
+marker.on('click', function (evt) {
+    popup.setPosition(evt.coordinate);
+    popupElement.style.display = 'block'; // Pastikan pop-up ditampilkan
+    popupElement.innerHTML = `<p>Name: ${name}<br>Volume: ${volume}</p>`;
+});
