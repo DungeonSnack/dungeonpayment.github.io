@@ -11,6 +11,7 @@ function checkLoginStatus() {
         loginButton.addEventListener("click", function () {
             // Logika log out
             localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("token"); // Hapus token dari localStorage
             alert("Logout berhasil");
             window.location.replace("/index.html");
         });
