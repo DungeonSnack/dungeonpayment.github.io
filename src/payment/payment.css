@@ -139,9 +139,21 @@ nav ul li a {
     border-radius: 50px;
 }
 
+.hero-image {
+    opacity: 0;
+    transform: translateX(200px); /* Mulai dari luar layar, ke kanan */
+    transition: all 2s ease-in-out; /* Transisi smooth untuk opacity dan posisi */
+}
+
 .hero-image img {
     width: 105vh;
     height: auto;
+    
+}
+
+.hero-image.visible {
+    opacity: 1;
+    transform: translateX(0); /* Kembali ke posisi normal */
 }
 
 .payment-methods {
@@ -162,12 +174,12 @@ nav ul li a {
 
 .trusted-clients {
     text-align: center;
-    padding: 60px 0;
+    padding: 20px 0;
     background-color:#f8f9fa  ;
 }
 
 .trusted-clients h3 {
-    font-size: 24px;
+    font-size: 34px;
     color: #333;
     margin-top: 30px;
 }
@@ -185,6 +197,7 @@ nav ul li a {
 .clients-logos img {
     width: 120px; /* Ukuran logo bisa diatur sesuai kebutuhan */
     height: auto;
+    padding-top:30px;
     opacity: 0.6; /* Memberikan efek transparansi pada logo */
     transition: opacity 0.3s ease;
 }
@@ -429,6 +442,62 @@ nav ul li a {
     }
 }
 
+.business-finance-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('/assets/img/background-1.png'); /* Path ke gambar */
+    background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+}
+
+.business-finance-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.learn-more-btn {
+    background-color: var(--primary-color); /* Adjust button color */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e9416b; /* Darker shade on hover */
+}
+
+.image-content {
+    margin-top: 20px;
+}
+
+.laptop-image {
+    width: 120vh;
+    max-width: 600px;
+    height: auto;
+}
+
+
 
 footer {
     text-align: center;
@@ -436,3 +505,50 @@ footer {
     background-color: white;
     color: #000000;
 }
+
+
+/* Efek transisi yang sama diterapkan pada beberapa elemen */
+.transition-element-right {
+    opacity: 0;
+    transform: translateX(100px); /* Animasi geser ke kanan */
+    transition: all 2s ease-in-out;
+}
+
+.transition-element-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Kembali ke posisi normal */
+}
+
+.transition-element-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Mulai dari posisi lebih bawah */
+    transition: all 1s ease-in-out; /* Transisi smooth */
+}
+
+.transition-element-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* Kembali ke posisi normal */
+}
+
+.transition-element-up {
+    opacity: 0;
+    transform: translateY(50px); /* Mulai dari posisi lebih bawah */
+    transition: all 0.9s ease-in-out; /* Transisi smooth */
+}
+
+.transition-element-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+.transition-element-down {
+    opacity: 0;
+    transform: translateY(-50px); /* Mulai dari posisi lebih bawah */
+    transition: all 0.9s ease-in-out; /* Transisi smooth */
+}
+
+.transition-element-down.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+

@@ -43,4 +43,46 @@ function logout() {
 window.onload = checkLoginStatus;
 
 
+// // Fungsi untuk menginisialisasi observer
+// function onIntersection(entries, observer) {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('visible'); // Tambahkan kelas visible saat elemen masuk viewport
+//             observer.unobserve(entry.target); // Hentikan observasi setelah animasi berjalan
+//         }
+//     });
+// }
+
+// // Inisialisasi Intersection Observer
+// const observer = new IntersectionObserver(onIntersection, {
+//     threshold: 0.5 // Memastikan 50% dari elemen terlihat sebelum memicu animasi
+// });
+
+// // Pilih elemen .hero-image dan observe
+// const heroImage = document.querySelector('.hero-image');
+// observer.observe(heroImage);
+
+
+// Fungsi untuk menginisialisasi observer
+function onIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Tambahkan kelas visible saat elemen terlihat
+            observer.unobserve(entry.target); // Hentikan observasi untuk elemen ini
+        }
+    });
+}
+
+// Inisialisasi Intersection Observer
+const observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.5 // Memastikan 50% dari elemen terlihat sebelum memicu animasi
+});
+
+// Pilih semua elemen dengan class 'transition-element-right' dan 'clients-logos'
+const transitionElements = document.querySelectorAll('.transition-element-right, .transition-element-left, .transition-element-down, .transition-element-up');
+
+// Terapkan observer pada setiap elemen
+transitionElements.forEach(element => {
+    observer.observe(element);
+});
 
