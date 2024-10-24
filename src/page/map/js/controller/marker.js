@@ -5,6 +5,8 @@ import {Vector as VectorLayer} from 'https://cdn.skypack.dev/ol/layer.js';
 import {fromLonLat} from 'https://cdn.skypack.dev/ol/proj.js';
 import {Icon, Style} from 'https://cdn.skypack.dev/ol/style.js';
 import {map, idmarker} from '../config/peta.js';
+import Overlay from 'https://cdn.skypack.dev/ol/Overlay.js';
+
 
 // Fungsi untuk menambahkan marker ke peta
 export function insertMarker(name, long, lat, volume) {
@@ -73,10 +75,11 @@ export function insertMarkerCOG(x, y) {
     marker.setStyle(
         new Style({
             image: new Icon({
-                anchor: [0.5, 46],
-                anchorXUnits: 'fraction',
-                anchorYUnits: 'pixels',
-                src: '/assets/img/icon1.png', // Pastikan path ini benar
+            anchor: [0.5, 46],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
+            src: '/assets/img/icon1.png', // Pastikan path ini benar
+            scale: 0.5,  // Pastikan path ini benar
             }),
         })
     );
@@ -107,3 +110,63 @@ places.forEach(place => {
 
 // Update ID marker jika perlu
 idmarker.id += places.length; // Misalkan Anda menambahkan banyak marker
+
+// Buat overlay untuk pop-up
+const popupElement = document.getElementById('popup'); // Pastikan Anda memiliki elemen HTML untuk pop-up
+const popup = new Overlay({
+    element: popupElement,
+    autoPan: true,
+    positioning: 'bottom-center',
+});
+
+// Tambahkan overlay ke peta
+map.addOverlay(popup);
+
+// Fungsi untuk menambahkan marker ke peta
+export function insertMarker(name, long, lat, volume) {
+    let marker = new Feature({
+        type: 'icon',
+        id: idmarker.id,
+        name: name,
+        volume: volume,
+        geometry: new Point(fromLonLat([long, lat])),
+    });
+
+    marker.setStyle(
+        new Style({
+            image: new Icon({
+                anchor: [0.5, 46],
+                anchorXUnits: 'fraction',
+                anchorYUnits: 'pixels',
+                src: '/assets/img/icon1.png',
+                scale: 0.5, // Ubah ukuran sesuai kebutuhan
+            }),
+        })
+    );
+
+    let vectorSource = new VectorSource({
+        features: [marker],
+    });
+
+    let vectorLayer = new VectorLayer({
+        source: vectorSource,
+    });
+
+    map.addLayer(vectorLayer);
+
+    // Tambahkan event listener untuk klik marker
+    marker.on('click', function(evt) {
+        // Dapatkan koordinat dari klik dan tampilkan pop-up
+        popup.setPosition(evt.coordinate);
+        popupElement.innerHTML = `<p>Name: ${name}<br>Volume: ${volume}</p>`;
+        popupElement.style.display = 'block';
+    });
+
+    // Tingkatkan idmarker.id untuk marker berikutnya
+    idmarker.id += 1;
+}
+
+// Menambahkan event untuk menutup pop-up saat mengklik peta
+map.on('click', function() {
+    popupElement.style.display = 'none';
+});
