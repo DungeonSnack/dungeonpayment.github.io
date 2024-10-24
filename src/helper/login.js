@@ -6,7 +6,7 @@ document.querySelector(".login-form").addEventListener("submit", async function 
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
 
-    // Melakukan permintaan POST ke endpoint login tanpa menggunakan token
+    // Melakukan permintaan POST ke endpoint login
     const response = await fetch("http://localhost:8080/login", {
         method: "POST",
         headers: {
@@ -18,9 +18,10 @@ document.querySelector(".login-form").addEventListener("submit", async function 
     const responseData = await response.json();
 
     if (response.ok) {
-        // Jika login berhasil, simpan status login di localStorage
+        // Jika login berhasil, simpan status login dan token di localStorage
         localStorage.setItem("isLoggedIn", true);
-        
+        localStorage.setItem("token", responseData.token);
+
         // Arahkan ke halaman index.html dan ubah tombol login menjadi log out
         window.location.replace("/index.html");
         alert("Login berhasil");
@@ -30,6 +31,7 @@ document.querySelector(".login-form").addEventListener("submit", async function 
         alert(responseData.message);
     }
 });
+
 
 
 // document.querySelector(".login-form").addEventListener("submit", async function (event) {
