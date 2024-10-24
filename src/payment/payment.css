@@ -497,6 +497,132 @@ nav ul li a {
     height: auto;
 }
 
+.journey-section {
+    background-color: var(--primary-color); /* Adjust background color */
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.container-journey {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.content-journey {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.journey-image {
+    max-width: 450px;
+    height: auto;
+}
+
+.text-content-explore {
+    flex: 1;
+    color: white;
+    padding-left: 40px;
+}
+
+.text-content-explore h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.explore-btn {
+    background-color: #f1f1f1; /* Adjust button color */
+    border: none;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section {
+    background-image: url('/assets/img/background-2.png'); /* Path ke gambar */
+    background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    padding: 250px 0px 50px 0px;
+    text-align: left;
+}
+
+.container-faq {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    border-radius:50px;
+}
+
+.faq-question {
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question .icon {
+    font-size: 14px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 15px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.faq-answer p {
+    opacity:0.8;
+}
+
+.faq-question.active .icon {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 2200px; /* Set max-height large enough to contain the full answer */
+    padding: 35px;
+}
+
+
+
 
 
 footer {
@@ -533,7 +659,7 @@ footer {
 .transition-element-up {
     opacity: 0;
     transform: translateY(50px); /* Mulai dari posisi lebih bawah */
-    transition: all 0.9s ease-in-out; /* Transisi smooth */
+    transition: all 1.1s ease-in-out; /* Transisi smooth */
 }
 
 .transition-element-up.visible {

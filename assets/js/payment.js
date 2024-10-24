@@ -86,3 +86,24 @@ transitionElements.forEach(element => {
     observer.observe(element);
 });
 
+document.querySelectorAll('.faq-question').forEach((item) => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        const answer = parent.querySelector('.faq-answer');
+
+        if (parent.classList.contains('active')) {
+            // Close the FAQ
+            answer.style.maxHeight = null;
+        } else {
+            // Open the FAQ
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+
+        parent.classList.toggle('active');
+
+        // Change the icon based on the active state
+        const icon = item.querySelector('.icon');
+        icon.textContent = parent.classList.contains('active') ? '▲' : '▼';
+    });
+});
+
