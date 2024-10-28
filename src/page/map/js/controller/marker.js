@@ -120,3 +120,21 @@ marker.on("click", function (evt) {
   popupElement.style.display = "block"; // Pastikan pop-up ditampilkan
   popupElement.innerHTML = `<p>Name: ${name}<br>Volume: ${volume}</p>`;
 });
+
+
+
+
+marker.on("click", function (evt) {
+  popup.setPosition(evt.coordinate);
+  popupElement.innerHTML = `<p>Name: ${name}<br>Volume: ${volume}</p>`;
+  popupElement.style.display = "block";
+
+  // Dapatkan koordinat pengguna
+  const userCoords = getUserCoords();
+  if (userCoords) {
+    // Dapatkan rute dari pengguna ke marker tetap
+    getRoute(userCoords, [long, lat], map); // Panggil fungsi routing
+  } else {
+    console.error("User location not found");
+  }
+});

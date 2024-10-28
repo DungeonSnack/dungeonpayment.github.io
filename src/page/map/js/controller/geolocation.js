@@ -57,3 +57,11 @@ function addUserMarker(lonLat) {
   // Tambahkan marker ke sumber layer
   userMarkerLayer.getSource().addFeature(userMarker);
 }
+
+export function getUserCoords() {
+  if (userMarkerLayer && userMarkerLayer.getSource().getFeatures().length > 0) {
+    return userMarkerLayer.getSource().getFeatures()[0].getGeometry().getCoordinates();
+  }
+  return null;
+}
+
