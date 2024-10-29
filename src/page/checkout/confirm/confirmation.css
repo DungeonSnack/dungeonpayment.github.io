@@ -136,15 +136,32 @@ body {
 .back-button {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: 12px 20px;
   background-color: #34a0a4;
   color: #fff;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .back-button:hover {
+  background-color: #28908f;
+}
+
+#download-receipt {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #34a0a4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#download-receipt:hover {
   background-color: #28908f;
 }

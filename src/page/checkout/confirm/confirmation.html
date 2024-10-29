@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Konfirmasi Pembayaran</title>
     <link rel="stylesheet" href="confirmation.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   </head>
   <body>
     <div class="confirmation-container">
@@ -41,8 +42,16 @@
         <!-- Tombol -->
         <a href="index.html" class="back-button">Kembali ke Halaman Utama</a>
       </div>
-    </div>
 
+      
+        <!-- Bagian UI konfirmasi lainnya -->
+
+        <button id="download-receipt" onclick="downloadReceipt()">
+          Unduh Bukti Pembelian
+        </button>
+       
+    </div>
+    <script src="confirmation.js"></script>
     <script>
       // Mengambil data dari Local Storage
       const totalProductPrice = localStorage.getItem("totalProductPrice");
