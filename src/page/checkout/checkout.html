@@ -33,29 +33,36 @@
 
             <div class="shipping-container">
                 <h2>Pengiriman dan Pembayaran</h2>
+
                 <div class="address-info">
                     <span class="label">Utama</span> Kosan - Muhammad Dany (62822323693648)
                     <p>jalan Gegerkalong Girang, No. 9 RT.03/RW.06, Isola, Sukasari</p>
                 </div>
-                <div class="shipping-options">
-                    <label for="shipping-option">Pilih Pengiriman</label>
-                    <select id="shipping-option" onchange="updateShipping()">
+                <div class="option-container">
+                    <label for="shipping-option" class="option-label">Pilih Pengiriman</label>
+                    <select id="shipping-option" class="custom-select" onchange="updateShipping()">
                         <option value="10500">Reguler (Rp10.500)</option>
                         <option value="15000">Kilat (Rp15.000)</option>
+                        <option value="20000">Express (Rp20.000)</option>
                     </select>
                 </div>
-                <div class="courier-options">
-                    <label for="courier-option">Pilih Kurir</label>
-                    <select id="courier-option" onchange="updateCourier()">
-                        <option value="AnterAja">AnterAja</option>
-                        <option value="JNE">JNE</option>
-                        <option value="SiCepat">SiCepat</option>
-                    </select>
-                    <p class="delivery-time" id="delivery-time">Estimasi tiba 1 - 3 Nov</p>
-                </div>
-                <div class="payment-method">
-                    <img src="bri-logo.png" alt="BRI Logo"> BRI Virtual Account
-                </div>
+
+                 <div class="option-container">
+        <label for="courier-option" class="option-label">Pilih Kurir</label>
+        <select id="courier-option" class="custom-select" onchange="updateCourier()">
+            <option value="AnterAja">AnterAja</option>
+            <option value="JNE">JNE</option>
+            <option value="SiCepat">SiCepat</option>
+        </select>
+        <p class="delivery-time" id="delivery-time">Estimasi tiba 1 - 3 Nov</p>
+    </div>
+               <!-- Pilih Pembayaran -->
+    <div class="option-container payment-option">
+        <label class="option-label">Pilih Pembayaran</label>
+        <div class="payment-method">
+            <img src="bri-logo.png" alt="BRI Logo" class="payment-logo"> BRI Virtual Account
+        </div>
+    </div>
             </div>
         </div>
 
