@@ -1,299 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DungeonPay - Online Payments for Everyone</title>
-    <link rel="stylesheet" href="./payment.css">
+    <link rel="stylesheet" href="./payment.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <h1>DungeonPay.</h1>
-            <img src="/assets/img/truelogo.png" alt="DungeonPay Image" class="logo-image">
+      <div class="logo">
+        <h1>DungeonPay.</h1>
+        <img
+          src="/assets/img/truelogo.png"
+          alt="DungeonPay Image"
+          class="logo-image"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="register-btn">
+        <a href="#">Register</a>
+      </div>
+      <div class="auth-buttons">
+        <!-- Ini akan muncul jika user belum login -->
+        <a href="#" class="signin-btn" id="sign-in-btn">Sign in</a>
+
+        <!-- Ini akan muncul jika user telah login -->
+        <div class="profile" id="profile-section" style="display: none">
+          <img
+            src="user-profile.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+            id="profile-pic"
+          />
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </nav>
-        <div class="register-btn">
-            <a href="#">Register</a>
-        </div>
-        <div class="auth-buttons">
-           
-            <!-- Ini akan muncul jika user belum login -->
-            <a href="#" class="signin-btn" id="sign-in-btn">Sign in</a>
-        
-            <!-- Ini akan muncul jika user telah login -->
-            <div class="profile" id="profile-section" style="display: none;">
-                <img src="user-profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
-            </div>
-        </div>
+      </div>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <p class="transition-element-left">💰 Mulai pembayaran yang aman disini</p>
-            <h2 class="transition-element-left">Pembayaran ke siapa saja secara <span style="color: var(--primary-color);">Online</span></h2>
-            <p class="transition-element-left">Make more sales by giving customers the ability to pay the way they love it.</p>
-            <div class="cta-buttons transition-element-left">
-                <a href="#" class="btn green-btn">Get Started</a>
-            </div>
-            <div class="payment-methods transition-element-up">
-                <p>Pembayaran Dengan beberapa layanan</p>
-                <div class="methods">
-                    <img src="/assets/img/bca.png" alt="bca">
-                    <img src="/assets/img/Apay.png" alt="apay">
-                    <img src="/assets/img/bni.png" alt="bni">
-                    <img src="/assets/img/bri.png" alt="bri">
-                    <img src="/assets/img/gpay.png" alt="googlepay">
-                    <img src="/assets/img/mandiri.png" alt="mandiri">
-                    <img src="/assets/img/mastercard.png" alt="mastercard">
-                </div>
-            </div>
+      <div class="hero-text">
+        <p class="transition-element-left">
+          💰 Mulai pembayaran yang aman disini
+        </p>
+        <h2 class="transition-element-left">
+          Pembayaran ke siapa saja secara
+          <span style="color: var(--primary-color)">Online</span>
+        </h2>
+        <p class="transition-element-left">
+          Make more sales by giving customers the ability to pay the way they
+          love it.
+        </p>
+        <div class="cta-buttons transition-element-left">
+          <a href="#" class="btn green-btn">Get Started</a>
         </div>
-        
-        <div class="hero-image transition-element-right">
-            <img src="/assets/img/Payment_page.png" alt="Visa Card">
+        <div class="payment-methods transition-element-up">
+          <p>Pembayaran Dengan beberapa layanan</p>
+          <div class="methods">
+            <img src="/assets/img/bca.png" alt="bca" />
+            <img src="/assets/img/Apay.png" alt="apay" />
+            <img src="/assets/img/bni.png" alt="bni" />
+            <img src="/assets/img/bri.png" alt="bri" />
+            <img src="/assets/img/gpay.png" alt="googlepay" />
+            <img src="/assets/img/mandiri.png" alt="mandiri" />
+            <img src="/assets/img/mastercard.png" alt="mastercard" />
+          </div>
         </div>
+      </div>
+
+      <div class="hero-image transition-element-right">
+        <img src="/assets/img/Payment_page.png" alt="Visa Card" />
+      </div>
     </section>
-    
 
     <section class="trusted-clients transition-element-up">
-        <h3>Our trusted clients</h3>
-        <div class="clients-logos transition-element-up">
-            <img src="/assets/img/alfamart.png" alt="Oracle">
-            <img src="/assets/img/indomart.png" alt="Intel">
-            <img src="/assets/img/shopee.png" alt="Logitech">
-            <img src="/assets/img/tokped.png" alt="Gecina">
-            <img src="/assets/img/spotify.png" alt="WordPress">
-            <img src="/assets/img/pajak.png" alt="Garmin">
-        </div>
-    </section>   
-        
+      <h3>Our trusted clients</h3>
+      <div class="clients-logos transition-element-up">
+        <img src="/assets/img/alfamart.png" alt="Oracle" />
+        <img src="/assets/img/indomart.png" alt="Intel" />
+        <img src="/assets/img/shopee.png" alt="Logitech" />
+        <img src="/assets/img/tokped.png" alt="Gecina" />
+        <img src="/assets/img/spotify.png" alt="WordPress" />
+        <img src="/assets/img/pajak.png" alt="Garmin" />
+      </div>
     </section>
-    
+
     <section class="platform-overview">
-        <div class="container">
-            <div class="row">
-                <div class="col-left transition-element-left">
-                    <h2>All-In-One platform for global growth</h2>
-                    <p>Make more sales by giving customers ability to pay the way they love it.</p>
-                    <ul class="features-list">
-                        <li>Withdraw your earnings</li>
-                        <li>Pay your VAT</li>
-                        <li>Pay your suppliers</li>
-                        <li>Connect with our partner</li>
-                    </ul>
-                </div>
-                <div class="col-right transition-element-right">
-                    <img src="/assets/img/request.png" alt="Request a Payment" class="image-responsive">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-left transition-element-left">
+            <h2>All-In-One platform for global growth</h2>
+            <p>
+              Make more sales by giving customers ability to pay the way they
+              love it.
+            </p>
+            <ul class="features-list">
+              <li>Withdraw your earnings</li>
+              <li>Pay your VAT</li>
+              <li>Pay your suppliers</li>
+              <li>Connect with our partner</li>
+            </ul>
+          </div>
+          <div class="col-right transition-element-right">
+            <img
+              src="/assets/img/request.png"
+              alt="Request a Payment"
+              class="image-responsive"
+            />
+          </div>
         </div>
+      </div>
     </section>
-    
+
     <section class="login-expand-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-left transition-element-left">
-                    <img src="/assets/img/login_form.png" alt="Login Form" class="image-responsive">
-                </div>
-                <div class="col-right transition-element-right">
-                    <h3>Expand your e-Commerce business</h3>
-                    <p>Go beyond borders! A full platform designed for the needs of today’s cross-border seller. Access working capital to invest back into your business and withdraw your earnings in your local currency.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-left transition-element-left">
+            <img
+              src="/assets/img/login_form.png"
+              alt="Login Form"
+              class="image-responsive"
+            />
+          </div>
+          <div class="col-right transition-element-right">
+            <h3>Expand your e-Commerce business</h3>
+            <p>
+              Go beyond borders! A full platform designed for the needs of
+              today’s cross-border seller. Access working capital to invest back
+              into your business and withdraw your earnings in your local
+              currency.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="cta-section">
-        <div class="container transition-element-up">
-            <h2>DungeonPay bikin layanan keuangan yang adil dan gampang diakses buat semua orang.</h2>
-            <button class="cta-link transition-element-up">Tentang Kami</button>
-        </div>
+      <div class="container transition-element-up">
+        <h2>
+          DungeonPay bikin layanan keuangan yang adil dan gampang diakses buat
+          semua orang.
+        </h2>
+        <button class="cta-link transition-element-up">Tentang Kami</button>
+      </div>
     </section>
-    
+
     <section class="testimonials-section transition-element-up">
-        <div class="star transition-element-up">✨</div>
-        
-        <div class="container-testi">
-            <h3>18+ Juta Orang <br><span>telah berhasil berhemat. Yay!</span></h3>
-            <div class="carousel transition-element-up">
-                <div class="star2 transition-element-up">✨</div>
-                <button class="prev">&lt;</button>
-                <div class="testimonial">
-                    <div class="quote-icon">“</div>
-                    <p>“Yang kita pikir biaya admin itu 'cuma', tapi kalau transaksinya banyak, lumayan juga totalnya, bahkan sampai jutaan!”</p>
-                    <span>- Febian</span>
-                </div>
-                <div class="testimonial">
-                    <p>“Awesome! This app really helps a lot when I have to transfer to different bank accounts. It has something that other apps can't offer!”</p>
-                    <span>- Viktoria Mardhika</span>
-                </div>
-                <div class="testimonial">
-                    <p>“Buat para pegiat olshop, pindah-pindah rekening asing lagi dong dengan rutinitas sana sini. Alhamdulillah, selalu tepat waktu dan responsnya cepat!”</p>
-                    <span>- Asma Nidaul</span>
-                </div>
-                <button class="next">&gt;</button>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <h4>Ribuan Perusahaan dan UKM</h4>
-                    <p>Percaya layanan DungeonPay untuk bisnis</p>
-                </div>
-                <div class="stat-item">
-                    <h4>Miliaran Rupiah</h4>
-                    <p>Transaksi dikelola tiap bulan</p>
-                </div>
-            </div>
+      <div class="star transition-element-up">✨</div>
+
+      <div class="container-testi">
+        <h3>18+ Juta Orang <br /><span>telah berhasil berhemat. Yay!</span></h3>
+        <div class="carousel transition-element-up">
+          <div class="star2 transition-element-up">✨</div>
+          <button class="prev">&lt;</button>
+          <div class="testimonial">
+            <div class="quote-icon">“</div>
+            <p>
+              “Yang kita pikir biaya admin itu 'cuma', tapi kalau transaksinya
+              banyak, lumayan juga totalnya, bahkan sampai jutaan!”
+            </p>
+            <span>- Febian</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              “Awesome! This app really helps a lot when I have to transfer to
+              different bank accounts. It has something that other apps can't
+              offer!”
+            </p>
+            <span>- Viktoria Mardhika</span>
+          </div>
+          <div class="testimonial">
+            <p>
+              “Buat para pegiat olshop, pindah-pindah rekening asing lagi dong
+              dengan rutinitas sana sini. Alhamdulillah, selalu tepat waktu dan
+              responsnya cepat!”
+            </p>
+            <span>- Asma Nidaul</span>
+          </div>
+          <button class="next">&gt;</button>
         </div>
+        <div class="stats">
+          <div class="stat-item">
+            <h4>Ribuan Perusahaan dan UKM</h4>
+            <p>Percaya layanan DungeonPay untuk bisnis</p>
+          </div>
+          <div class="stat-item">
+            <h4>Miliaran Rupiah</h4>
+            <p>Transaksi dikelola tiap bulan</p>
+          </div>
+        </div>
+      </div>
     </section>
-    
+
     <section class="business-finance-section transition-element-up">
-        <div class="container">
-            <div class="header-content transition-element-up">
-                <h2>Kelola keuangan perusahaan</h2>
-                <p>Dengan DungeonPay Business, mengelola keuangan perusahaan anda dengan aman dan mudah</p>
-                <button class="learn-more-btn transition-element-up">Selengkapnya</button>
-            </div>
-            <div class="image-content transition-element-up">
-                <img src="/assets/img/laptop.png" alt="DungeonPay for Business" class="laptop-image">
-            </div>
+      <div class="container">
+        <div class="header-content transition-element-up">
+          <h2>Kelola keuangan perusahaan</h2>
+          <p>
+            Dengan DungeonPay Business, mengelola keuangan perusahaan anda
+            dengan aman dan mudah
+          </p>
+          <button class="learn-more-btn transition-element-up">
+            Selengkapnya
+          </button>
         </div>
+        <div class="image-content transition-element-up">
+          <img
+            src="/assets/img/laptop.png"
+            alt="DungeonPay for Business"
+            class="laptop-image"
+          />
+        </div>
+      </div>
     </section>
-    
+
     <section class="journey-section">
-        <div class="container-journey">
-
-
-
-            <div class="content-journey">
-                <div class="illustration transition-element-left">
-                    <img src="/assets/img/teamwork.png" alt="Journey Illustration" class="journey-image">
-                </div>
-                <div class="text-content-explore transition-element-right">
-                    <h2>Ayo, bergabung dalam perjalanan DungeonPay untuk menciptakan layanan keuangan paling aman di dunia!</h2>
-                    <button class="explore-btn">Selengkapnya</button>
-                </div>
-
-
-
-
-            </div>
+      <div class="container-journey">
+        <div class="content-journey">
+          <div class="illustration transition-element-left">
+            <img
+              src="/assets/img/teamwork.png"
+              alt="Journey Illustration"
+              class="journey-image"
+            />
+          </div>
+          <div class="text-content-explore transition-element-right">
+            <h2>
+              Ayo, bergabung dalam perjalanan DungeonPay untuk menciptakan
+              layanan keuangan paling aman di dunia!
+            </h2>
+            <button class="explore-btn">Selengkapnya</button>
+          </div>
         </div>
+      </div>
     </section>
-    
+
     <section class="faq-section transition-element-down">
-        <div class="container-faq transition-element-up">
-
-
-            <h2>Pertanyaan seputar DungeonPay</h2>
-            <div class="faq-item transition-element-up">
-
-
-                <button class="faq-question">
-                    Apa saja bank yang sudah dilayani oleh DungeonPay?
-                    <span class="icon">▼</span>
-                </button>
-                <div class="faq-answer">
-
-
-                    <p>DungeonPay melayani lebih dari 20 bank, termasuk BCA, BNI, Mandiri, BRI, dan banyak lainnya.</p>
-                </div>
-
-
-            </div>
-    
-            <div class="faq-item transition-element-up">
-                <button class="faq-question">
-
-
-                    Apakah DungeonPay dapat digunakan untuk top-up e-wallet juga?
-                    <span class="icon">▼</span>
-                </button>
-
-
-
-                <div class="faq-answer">
-                    <p>Ya, DungeonPay mendukung top-up e-wallet seperti GoPay, OVO, DANA, dan LinkAja.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item transition-element-up">
-
-
-
-                <button class="faq-question">
-                    Apakah DungeonPay dapat digunakan untuk transfer ke luar negeri?
-                    <span class="icon">▼</span>
-                </button>
-
-
-
-                <div class="faq-answer">
-                    <p>Ya, DungeonPay menyediakan layanan pengiriman uang ke luar negeri dengan biaya rendah.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item transition-element-up">
-
-
-                <button class="faq-question">
-                    Apakah transaksi di DungeonPay aman?
-                    <span class="icon">▼</span>
-                </button>
-
-
-                <div class="faq-answer">
-                    <p>Ya, DungeonPay dilengkapi dengan teknologi keamanan tinggi untuk memastikan keamanan transaksi Anda.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item transition-element-up">
-
-
-                <button class="faq-question">
-                    Adakah layanan pembelian pulsa, paket data serta PPOB di DungeonPay?
-                    <span class="icon">▼</span>
-                </button>
-
-
-                <div class="faq-answer">
-                    <p>Ya, DungeonPay mendukung pembelian pulsa, paket data, dan pembayaran PPOB lainnya.</p>
-                </div>
-            </div>
-    
-            <div class="faq-item transition-element-up">
-                <button class="faq-question">
-                    Bagaimana cara transfer menggunakan DungeonPay?
-                    <span class="icon">▼</span>
-                </button>
-
-
-
-                <div class="faq-answer">
-                    <p>Anda dapat melakukan transfer dengan mengikuti langkah-langkah mudah di website DungeonPay.</p>
-                </div>
-            </div>
+      <div class="container-faq transition-element-up">
+        <h2>Pertanyaan seputar DungeonPay</h2>
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Apa saja bank yang sudah dilayani oleh DungeonPay?
+            <span class="icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              DungeonPay melayani lebih dari 20 bank, termasuk BCA, BNI,
+              Mandiri, BRI, dan banyak lainnya.
+            </p>
+          </div>
         </div>
+
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Apakah DungeonPay dapat digunakan untuk top-up e-wallet juga?
+            <span class="icon">▼</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Ya, DungeonPay mendukung top-up e-wallet seperti GoPay, OVO, DANA,
+              dan LinkAja.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Apakah DungeonPay dapat digunakan untuk transfer ke luar negeri?
+            <span class="icon">▼</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Ya, DungeonPay menyediakan layanan pengiriman uang ke luar negeri
+              dengan biaya rendah.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Apakah transaksi di DungeonPay aman?
+            <span class="icon">▼</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Ya, DungeonPay dilengkapi dengan teknologi keamanan tinggi untuk
+              memastikan keamanan transaksi Anda.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Adakah layanan pembelian pulsa, paket data serta PPOB di DungeonPay?
+            <span class="icon">▼</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Ya, DungeonPay mendukung pembelian pulsa, paket data, dan
+              pembayaran PPOB lainnya.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item transition-element-up">
+          <button class="faq-question">
+            Bagaimana cara transfer menggunakan DungeonPay?
+            <span class="icon">▼</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Anda dapat melakukan transfer dengan mengikuti langkah-langkah
+              mudah di website DungeonPay.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    
 
     <footer>
-        <p>&copy; 2024 DungeonPay. All Rights Reserved.</p>
+      <p>&copy; 2024 DungeonPay. All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./payment.js"></script>
-
-</body>
+  </body>
 </html>

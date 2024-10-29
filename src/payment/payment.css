@@ -1,767 +1,752 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
-    --primary-color: #ec0b43;
-    --secondary-color: #58355e;
-    --teks-color-1: #f9ed5b;
-    --teks-color-2: #acff6c;
-    --teks-color-3: #7ae7c7;
-    
-  }
+  --primary-color: #ec0b43;
+  --secondary-color: #58355e;
+  --teks-color-1: #f9ed5b;
+  --teks-color-2: #acff6c;
+  --teks-color-3: #7ae7c7;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Mukta", serif;
-    line-height: 1.4;
+  font-family: "Mukta", serif;
+  line-height: 1.4;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
 }
 .logo h1 {
-    font-size: 28px;
-    color: var(--primary-color);
-    font-family: "poppins", serif;
+  font-size: 28px;
+  color: var(--primary-color);
+  font-family: "poppins", serif;
 }
 
 .logo {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-.logo h1, .logo img {
-    transition: opacity 0.3s ease; /* Efek transisi halus */
+.logo h1,
+.logo img {
+  transition: opacity 0.3s ease; /* Efek transisi halus */
 }
 
 .logo-image {
-    display: block;
-    opacity: 0; /* Sembunyikan gambar awalnya */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 130px; /* Sesuaikan ukuran gambar dengan elemen logo */
-    height: auto;
-    padding:0;
+  display: block;
+  opacity: 0; /* Sembunyikan gambar awalnya */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px; /* Sesuaikan ukuran gambar dengan elemen logo */
+  height: auto;
+  padding: 0;
 }
 
 .logo:hover h1 {
-    opacity: 0; /* Sembunyikan teks saat hover */
+  opacity: 0; /* Sembunyikan teks saat hover */
 }
 
 .logo:hover .logo-image {
-    opacity: 1; /* Tampilkan gambar saat hover */
+  opacity: 1; /* Tampilkan gambar saat hover */
 }
 
-
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
 }
 
 .auth-buttons a {
-    text-decoration: none;
-    margin-left: 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .register-btn a {
-    background-color: transparent;
-    color: #333;
-    text-decoration: none;
+  background-color: transparent;
+  color: #333;
+  text-decoration: none;
 }
 
 .signin-btn {
-    background-color: #333;
-    color: #fff;
-
+  background-color: #333;
+  color: #fff;
 }
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0px 100px 50px;
-    background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px 100px 50px;
+  background-color: #f8f9fa;
 }
 
 .hero-text h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight:900;
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 900;
 }
 
 .hero-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight:700;
-    color:#7c7c7c;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #7c7c7c;
 }
 .cta-buttons {
-    margin: 105px 15px 0px 0px;
+  margin: 105px 15px 0px 0px;
 }
 .cta-buttons .btn {
-    padding: 20px 35px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007b5e;
-    border-radius: 30px;
-    transition:ease-in-out .4s;
-    
+  padding: 20px 35px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007b5e;
+  border-radius: 30px;
+  transition: ease-in-out 0.4s;
 }
 
 .green-btn {
-    background-color: #28a745;
-    margin: 105px 15px 0px 0px;
-    
+  background-color: #28a745;
+  margin: 105px 15px 0px 0px;
 }
 
-.cta-buttons .btn:hover { /* Selector yang benar untuk hover */
-    background-color: #18b93c;
-    padding: 15px 25px;
-    border-radius: 50px;
+.cta-buttons .btn:hover {
+  /* Selector yang benar untuk hover */
+  background-color: #18b93c;
+  padding: 15px 25px;
+  border-radius: 50px;
 }
 
 .hero-image {
-    opacity: 0;
-    transform: translateX(200px); /* Mulai dari luar layar, ke kanan */
-    transition: all 2s ease-in-out; /* Transisi smooth untuk opacity dan posisi */
+  opacity: 0;
+  transform: translateX(200px); /* Mulai dari luar layar, ke kanan */
+  transition: all 2s ease-in-out; /* Transisi smooth untuk opacity dan posisi */
 }
 
 .hero-image img {
-    width: 105vh;
-    height: auto;
-    
+  width: 105vh;
+  height: auto;
 }
 
 .hero-image.visible {
-    opacity: 1;
-    transform: translateX(0); /* Kembali ke posisi normal */
+  opacity: 1;
+  transform: translateX(0); /* Kembali ke posisi normal */
 }
 
 .payment-methods {
-    padding: 90px 0px 0px 0px;
-    text-align: left;
+  padding: 90px 0px 0px 0px;
+  text-align: left;
 }
 
 .payment-methods p {
-    font-size: 18px;
-    font-weight:400;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .methods img {
-    margin: 0 10px;
-    width: 50px;
-    height: auto;
+  margin: 0 10px;
+  width: 50px;
+  height: auto;
 }
 
 .trusted-clients {
-    text-align: center;
-    padding: 20px 0;
-    background-color:#f8f9fa  ;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f9fa;
 }
 
 .trusted-clients h3 {
-    font-size: 34px;
-    color: #333;
-    margin-top: 30px;
+  font-size: 34px;
+  color: #333;
+  margin-top: 30px;
 }
 
 .clients-logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px; /* Jarak antara logo */
-    flex-wrap: wrap; /* Agar logo responsive */
-    max-width: 1000px; /* Lebar maksimal */
-    margin: 0 auto; /* Pusatkan elemen */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px; /* Jarak antara logo */
+  flex-wrap: wrap; /* Agar logo responsive */
+  max-width: 1000px; /* Lebar maksimal */
+  margin: 0 auto; /* Pusatkan elemen */
 }
 
 .clients-logos img {
-    width: 120px; /* Ukuran logo bisa diatur sesuai kebutuhan */
-    height: auto;
-    padding-top:30px;
-    opacity: 0.6; /* Memberikan efek transparansi pada logo */
-    transition: opacity 0.3s ease;
+  width: 120px; /* Ukuran logo bisa diatur sesuai kebutuhan */
+  height: auto;
+  padding-top: 30px;
+  opacity: 0.6; /* Memberikan efek transparansi pada logo */
+  transition: opacity 0.3s ease;
 }
 
 .clients-logos img:hover {
-    opacity: 1; /* Efek hover mengembalikan ke opacity penuh */
+  opacity: 1; /* Efek hover mengembalikan ke opacity penuh */
 }
-
 
 /* Menjadikan gambar responsif */
 .image-responsive {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Mengatur jarak antara gambar dan teks sekitarnya */
 .platform-overview .col-right img,
 .login-expand-section .col-left img {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .platform-overview {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .platform-overview h2 {
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 15px;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .platform-overview p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .features-list {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
-    color: #555;
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  color: #555;
 }
 
 .features-list li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
 }
 
 .features-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #28a745;
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
 }
 
 .login-expand-section {
-    padding: 80px 0;
-    display: flex;
-    align-items: center;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
 }
-
 
 /* Layout Flexbox */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 15px 0px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 15px 0px 15px;
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-.col-left, .col-right {
-    flex: 1;
-    min-width: 300px;
+.col-left,
+.col-right {
+  flex: 1;
+  min-width: 300px;
 }
 
 .cta-section {
-    background-color: #f8f9fa;
-    padding: 50px 300px;
-    text-align: center;
+  background-color: #f8f9fa;
+  padding: 50px 300px;
+  text-align: center;
 }
 
 .cta-section h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .cta-link {
-    background-color: #ff658b;
-    color: #fff;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition:ease-in-out 0.2s
+  background-color: #ff658b;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
 }
 
 .cta-link:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
-
 .testimonials-section {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .testimonials-section h3 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color:var(--primary-color);
-    span {
-        font-size: 22px;
-        color:black;
-        opacity:0.5;
-        margin-bottom: 30px;
-        font-weight:300;
-    }
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  span {
+    font-size: 22px;
+    color: black;
+    opacity: 0.5;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
 }
 
 .container-testi {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color:#f9f9f9;
-    padding:50px;
-    border-radius:50px;
-    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
-    
-
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .testimonial {
-    max-width: 400px;
-    margin: 0 15px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    background-color: #f9f9f9;
-    border-radius: 10p;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+  max-width: 400px;
+  margin: 0 15px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 10p;
+  text-align: center;
+  font-family: "Arial", sans-serif;
 }
 
 .quote-icon {
-    font-size: 7rem; /* Ukuran besar untuk tanda kutip */
-    color: var(--primary-color); /* Warna sesuai kebutuhan */
-    position: absolute;
-    top: -48px; /* Mengatur posisi tanda kutip */
-    left: 20px;
-    font-family: 'Georgia', serif; /* Gunakan font serupa serif untuk tanda kutip */
+  font-size: 7rem; /* Ukuran besar untuk tanda kutip */
+  color: var(--primary-color); /* Warna sesuai kebutuhan */
+  position: absolute;
+  top: -48px; /* Mengatur posisi tanda kutip */
+  left: 20px;
+  font-family: "Georgia", serif; /* Gunakan font serupa serif untuk tanda kutip */
 }
 
 .star {
-    font-size:80px;
-    position: absolute;
-    padding: 0px 0px 200px 400px;
-    
+  font-size: 80px;
+  position: absolute;
+  padding: 0px 0px 200px 400px;
 }
 .star2 {
-    font-size:60px;
-    position: absolute;
-    padding: 0px 0px 300px 600px;
-    
+  font-size: 60px;
+  position: absolute;
+  padding: 0px 0px 300px 600px;
 }
 
 .testimonial p {
-    font-size: 1em;
-    margin-bottom: 15px;
-    line-height: 1.5;
+  font-size: 1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .testimonial span {
-    font-size: 0.9em;
-    font-weight: bold;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 .carousel button {
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    color: #e9416b;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #e9416b;
 }
 
 .carousel button:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .stat-item {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
 
 .stat-item h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .stat-item p {
-    font-size: 1.1em;
-    color: #777;
+  font-size: 1.1em;
+  color: #777;
 }
 
 @media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-    }
-    .carousel {
-        flex-direction: column;
-    }
+  .stats {
+    flex-direction: column;
+  }
+  .carousel {
+    flex-direction: column;
+  }
 }
 
 .business-finance-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 0;
-    background-image: url('/assets/img/background-1.png'); /* Path ke gambar */
-    background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
-    background-position: center; /* Memusatkan gambar */
-    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+  background-image: url("/assets/img/background-1.png"); /* Path ke gambar */
+  background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
 }
 
 .business-finance-section .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-content h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .header-content p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .learn-more-btn {
-    background-color: var(--primary-color); /* Adjust button color */
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: var(--primary-color); /* Adjust button color */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .learn-more-btn:hover {
-    background-color: #e9416b; /* Darker shade on hover */
+  background-color: #e9416b; /* Darker shade on hover */
 }
 
 .image-content {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .laptop-image {
-    width: 120vh;
-    max-width: 600px;
-    height: auto;
+  width: 120vh;
+  max-width: 600px;
+  height: auto;
 }
 
 .journey-section {
-    background-color: var(--primary-color); /* Adjust background color */
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+  background-color: var(--primary-color); /* Adjust background color */
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 .container-journey {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .content-journey {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .illustration {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .journey-image {
-    max-width: 450px;
-    height: auto;
+  max-width: 450px;
+  height: auto;
 }
 
 .text-content-explore {
-    flex: 1;
-    color: white;
-    padding-left: 40px;
+  flex: 1;
+  color: white;
+  padding-left: 40px;
 }
 
 .text-content-explore h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    line-height: 1.4;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .explore-btn {
-    background-color: #f1f1f1; /* Adjust button color */
-    border: none;
-    padding: 10px 20px;
-    color: var(--primary-color);
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #f1f1f1; /* Adjust button color */
+  border: none;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .faq-section {
-    background-image: url('/assets/img/background-2.png'); /* Path ke gambar */
-    background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
-    background-position: center; /* Memusatkan gambar */
-    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-    padding: 250px 0px 50px 0px;
-    text-align: left;
+  background-image: url("/assets/img/background-2.png"); /* Path ke gambar */
+  background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  padding: 250px 0px 50px 0px;
+  text-align: left;
 }
 
 .container-faq {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .faq-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .faq-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    border-radius:50px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 50px;
 }
 
 .faq-question {
-    background-color: white;
-    border: none;
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .faq-question .icon {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-    padding: 0 15px;
-    background-color: #f9f9f9;
-    font-size: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0 15px;
+  background-color: #f9f9f9;
+  font-size: 16px;
 }
 
 .faq-answer p {
-    opacity:0.8;
+  opacity: 0.8;
 }
 
 .faq-question.active .icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .faq-item.active .faq-answer {
-    max-height: 2200px; /* Set max-height large enough to contain the full answer */
-    padding: 35px;
+  max-height: 2200px; /* Set max-height large enough to contain the full answer */
+  padding: 35px;
 }
-
-
-
-
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    color: #000000;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: #000000;
 }
-
 
 /* Efek transisi yang sama diterapkan pada beberapa elemen */
 .transition-element-right {
-    opacity: 0;
-    transform: translateX(100px); /* Animasi geser ke kanan */
-    transition: all 2s ease-in-out;
+  opacity: 0;
+  transform: translateX(100px); /* Animasi geser ke kanan */
+  transition: all 2s ease-in-out;
 }
 
 .transition-element-right.visible {
-    opacity: 1;
-    transform: translateX(0); /* Kembali ke posisi normal */
+  opacity: 1;
+  transform: translateX(0); /* Kembali ke posisi normal */
 }
 
 .transition-element-left {
-    opacity: 0;
-    transform: translateX(-50px); /* Mulai dari posisi lebih bawah */
-    transition: all 1s ease-in-out; /* Transisi smooth */
+  opacity: 0;
+  transform: translateX(-50px); /* Mulai dari posisi lebih bawah */
+  transition: all 1s ease-in-out; /* Transisi smooth */
 }
 
 .transition-element-left.visible {
-    opacity: 1;
-    transform: translateX(0); /* Kembali ke posisi normal */
+  opacity: 1;
+  transform: translateX(0); /* Kembali ke posisi normal */
 }
 
 .transition-element-up {
-    opacity: 0;
-    transform: translateY(50px); /* Mulai dari posisi lebih bawah */
-    transition: all 1.1s ease-in-out; /* Transisi smooth */
+  opacity: 0;
+  transform: translateY(50px); /* Mulai dari posisi lebih bawah */
+  transition: all 1.1s ease-in-out; /* Transisi smooth */
 }
 
 .transition-element-up.visible {
-    opacity: 1;
-    transform: translateY(0); /* Kembali ke posisi normal */
+  opacity: 1;
+  transform: translateY(0); /* Kembali ke posisi normal */
 }
 
 .transition-element-down {
-    opacity: 0;
-    transform: translateY(-50px); /* Mulai dari posisi lebih bawah */
-    transition: all 0.9s ease-in-out; /* Transisi smooth */
+  opacity: 0;
+  transform: translateY(-50px); /* Mulai dari posisi lebih bawah */
+  transition: all 0.9s ease-in-out; /* Transisi smooth */
 }
 
 .transition-element-down.visible {
-    opacity: 1;
-    transform: translateY(0); /* Kembali ke posisi normal */
+  opacity: 1;
+  transform: translateY(0); /* Kembali ke posisi normal */
 }
 
 .set .swiper {
-    width: fit-content;
-    height: fit-content;
-    border-radius: 30px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --swiper-navigation-color: black;
-  }
-  
+  width: fit-content;
+  height: fit-content;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --swiper-navigation-color: black;
+}
+
 .set .swiper .swiper-wrapper {
-    width: 100%;
-    height: inherit;
-  }
-  
+  width: 100%;
+  height: inherit;
+}
+
 .set .swiper .swiper-wrapper .swiper-slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .set .swiper .swiper-wrapper .swiper-slide a {
-    display: none;
-    z-index: 2;
-  }
-  
- .set .swiper .swiper-wrapper .swiper-slide img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(0);
-    transition: 0.3s ease-in-out all;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
+  display: none;
+  z-index: 2;
+}
+
+.set .swiper .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0);
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  z-index: 1;
+}
+
 .set .swiper .swiper-wrapper .swiper-slide:hover img,
 .set .swiper .swiper-wrapper .swiper-slide:hover .overlay {
-    opacity: 1;
-    filter: brightness(0.5);
-  }
-  
- .set .swiper .swiper-wrapper .swiper-slide .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
-    color: white; /* Warna teks */
-    display: flex; /* Menggunakan flexbox untuk memusatkan teks */
-    align-items: center; /* Memusatkan secara vertikal */
-    justify-content: center; /* Memusatkan secara horizontal */
-    opacity: 0; /* Awalnya tersembunyi */
-    transition: opacity 0.3s; /* Efek transisi */
-  }
-  
+  opacity: 1;
+  filter: brightness(0.5);
+}
+
+.set .swiper .swiper-wrapper .swiper-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
+  color: white; /* Warna teks */
+  display: flex; /* Menggunakan flexbox untuk memusatkan teks */
+  align-items: center; /* Memusatkan secara vertikal */
+  justify-content: center; /* Memusatkan secara horizontal */
+  opacity: 0; /* Awalnya tersembunyi */
+  transition: opacity 0.3s; /* Efek transisi */
+}
+
 .set .swiper .swiper-wrapper .swiper-slide .overlay .badge {
-    position: absolute;
-    top: 7px; /* Jarak dari atas */
-    right: 10px; /* Jarak dari kanan */
-    /* background-color: red; Warna latar belakang */
-    color: gold; /* Warna teks */
-    padding: 5px 10px; /* Ruang di dalam badge */
-    border-radius: 5px; /* Sudut melingkar */
-    transform: rotate(10deg); /* Memutar badge */
-    font-weight: bold; /* Teks tebal */
-    z-index: 10; /* Pastikan badge di atas overlay */
-    transition: background-color 0.3s; /* Efek transisi pada warna latar */
-  }
-  
+  position: absolute;
+  top: 7px; /* Jarak dari atas */
+  right: 10px; /* Jarak dari kanan */
+  /* background-color: red; Warna latar belakang */
+  color: gold; /* Warna teks */
+  padding: 5px 10px; /* Ruang di dalam badge */
+  border-radius: 5px; /* Sudut melingkar */
+  transform: rotate(10deg); /* Memutar badge */
+  font-weight: bold; /* Teks tebal */
+  z-index: 10; /* Pastikan badge di atas overlay */
+  transition: background-color 0.3s; /* Efek transisi pada warna latar */
+}
+
 .set .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    opacity: 0;
-  }
-  
+  opacity: 0;
+}
+
 .set .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
-    background-color: darkred;
-  }
+  background-color: darkred;
+}
 .set .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    background-color: darkred;
-    opacity: 1;
-  }
-  
+  background-color: darkred;
+  opacity: 1;
+}
+
 .set .swiper .swiper-wrapper .swiper-slide:hover a {
-    display: block;
-  }
+  display: block;
+}
