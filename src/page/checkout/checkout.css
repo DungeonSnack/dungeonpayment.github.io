@@ -20,7 +20,7 @@ body {
 .checkout-container {
   display: flex;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   background-color: #fff;
   border-radius: 8px;
