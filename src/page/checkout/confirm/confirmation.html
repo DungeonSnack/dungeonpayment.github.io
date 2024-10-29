@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfirmasi Pembayaran</title>
+  <link rel="stylesheet" href="confirmation.css" />
+</head>
+<body>
+  <div class="confirmation-container">
+    <div class="message-box">
+      <h1>🎉 Pembayaran Berhasil!</h1>
+      <p>Terima kasih telah melakukan pembayaran.</p>
+      <div class="summary">
+        <h2>Ringkasan Pembelian</h2>
+        <p><strong>Nama Produk:</strong> Payung Tenda 180 CM Jualan Taman Pantai Cafe Bazar Lapak HUGO - Merah - UV</p>
+        <p><strong>Jumlah Barang:</strong> <span id="confirm-quantity">1</span></p>
+        <p><strong>Total Harga Produk:</strong> <span id="confirm-total-product-price">Rp80.000</span></p>
+        <p><strong>Total Ongkos Kirim:</strong> <span id="confirm-shipping-cost">Rp10.500</span></p>
+        <p><strong>Total Tagihan:</strong> <span id="confirm-total-price">Rp93.100</span></p>
+      </div>
+      <a href="index.html" class="back-button">Kembali ke Halaman Utama</a>
+    </div>
+  </div>
+
+  <script>
+    // Mengambil data dari Local Storage jika disimpan
+    const totalProductPrice = localStorage.getItem("totalProductPrice");
+    const shippingCost = localStorage.getItem("shippingCost");
+    const totalPrice = localStorage.getItem("totalPrice");
+    const quantity = localStorage.getItem("quantity");
+
+    // Memperbarui elemen di halaman dengan data dari Local Storage
+    document.getElementById("confirm-total-product-price").innerText = `Rp${parseInt(totalProductPrice).toLocaleString("id-ID")}`;
+    document.getElementById("confirm-shipping-cost").innerText = `Rp${parseInt(shippingCost).toLocaleString("id-ID")}`;
+    document.getElementById("confirm-total-price").innerText = `Rp${parseInt(totalPrice).toLocaleString("id-ID")}`;
+    document.getElementById("confirm-quantity").innerText = quantity;
+  </script>
+</body>
+</html>
