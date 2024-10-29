@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="payreg.css">
+    <link
+      rel="icon"
+      href="../../../assets/img/logodugeon.png"
+      type="image/x-icon"
+    />
+</head>
+<body>
+    <section class="container">
+        <div class="image-section">
+          <div class="image-wrapper">
+            <img src="/assets/img/mesh-gradient-2.png" alt="">
+          </div>
+          
+          <div class="content-container">
+            <h1 class="section-heading">Ayo Cek Makanan Hasil <span>UMKM </span>Yang Bekerja Sama Dengan Kami!</h1>
+            <p class="section-paragraph">Nikmati Rasa, Dukung Usaha!</p>
+          </div>
+        </div>
+      
+        <div class="form-section">
+          <div class="form-wrapper">
+            <div class="logo-container">
+              <a href="/index.html" class="logo-container">
+                <img src="/assets/img/truelogo.png" alt="Logo">
+              </a>
+            </div>
+      
+            <h2>Daftar Akun Baru 👋🏻</h2>
+            <p>Isi form di bawah ini untuk mendaftar.</p>
+      
+            <form class="signup-form">
+              <div class="input-container">
+                <div class="form-group">
+                  <label for="name">Nama</label>
+                  <input type="text" id="nama" name="nama" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Nomor HP</label>
+                  <input type="text" id="no_hp" name="no_hp" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" required>
+                </div>
+              </div>
+      
+              <button type="submit" class="signup-btn">Daftar</button>
+            </form>
+      
+            <div class="or-divider">atau</div>
+      
+            <button class="google-signin">
+              <object data="/assets/img/google.svg"></object>
+              <span>Daftar dengan Google</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <script type="module" src="./../../helper/register.js"></script>
+</body>
+</html>
