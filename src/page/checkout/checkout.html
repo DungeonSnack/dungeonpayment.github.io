@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Checkout Page</title>
-    <link rel="stylesheet" href="checkout.css">
-</head>
-<body>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
     <div class="checkout-container">
-        <div class="left-section">
-            <div class="product-container">
-                <h2>Barang yang dibeli</h2>
-                <div class="product-item">
-                    <img src="/assets/img/food2.png" alt="Produk">
-                    <div class="product-info">
-                        <p class="product-name">Payung Tenda 180 CM Jualan Taman Pantai Cafe Bazar Lapak HUGO - Merah - UV</p>
-                        <p class="product-weight">1000gr, Merah - UV</p>
-                        <p class="product-price" id="product-price">Rp80.000</p>
-                        <div class="note">
-                            <label for="note-text">Tulis Catatan:</label>
-                            <input type="text" id="note-text" oninput="validateNote()">
-                            <div class="quantity">
-                                <button onclick="updateQuantity(-1)">-</button>
-                                <span id="quantity">1</span>
-                                <button onclick="updateQuantity(1)">+</button>
-                            </div>
-                        </div>
-                        <p class="protection">Proteksi Rusak Total 3 bulan <a href="#">Pelajari</a></p>
-                    </div>
+      <div class="left-section">
+        <div class="product-container">
+          <h2>Barang yang dibeli</h2>
+          <div class="product-item">
+            <img src="/assets/img/food2.png" alt="Produk" />
+            <div class="product-info">
+              <p class="product-name">
+                Payung Tenda 180 CM Jualan Taman Pantai Cafe Bazar Lapak HUGO -
+                Merah - UV
+              </p>
+              <p class="product-weight">1000gr, Merah - UV</p>
+              <p class="product-price" id="product-price">Rp80.000</p>
+              <div class="note">
+                <label for="note-text">Tulis Catatan:</label>
+                <input type="text" id="note-text" oninput="validateNote()" />
+                <div class="quantity-control">
+                  <button onclick="updateQuantity(-1)">-</button>
+                  <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    readonly
+                  />
+                  <button onclick="updateQuantity(1)">+</button>
                 </div>
+              </div>
+
+              <p class="protection">
+                Proteksi Rusak Total 3 bulan <a href="#">Pelajari</a>
+              </p>
             </div>
-
-            <div class="shipping-container">
-                <h2>Pengiriman dan Pembayaran</h2>
-
-                <div class="address-info">
-                    <span class="label">Utama</span> Kosan - Muhammad Dany (62822323693648)
-                    <p>jalan Gegerkalong Girang, No. 9 RT.03/RW.06, Isola, Sukasari</p>
-                </div>
-                <div class="option-container">
-                    <label for="shipping-option" class="option-label">Pilih Pengiriman</label>
-                    <select id="shipping-option" class="custom-select" onchange="updateShipping()">
-                        <option value="10500">Reguler (Rp10.500)</option>
-                        <option value="15000">Kilat (Rp15.000)</option>
-                        <option value="20000">Express (Rp20.000)</option>
-                    </select>
-                </div>
-
-                 <div class="option-container">
-        <label for="courier-option" class="option-label">Pilih Kurir</label>
-        <select id="courier-option" class="custom-select" onchange="updateCourier()">
-            <option value="AnterAja">AnterAja</option>
-            <option value="JNE">JNE</option>
-            <option value="SiCepat">SiCepat</option>
-        </select>
-        <p class="delivery-time" id="delivery-time">Estimasi tiba 1 - 3 Nov</p>
-    </div>
-               <!-- Pilih Pembayaran -->
-    <div class="option-container payment-option">
-        <label class="option-label">Pilih Pembayaran</label>
-        <div class="payment-method">
-            <img src="bri-logo.png" alt="BRI Logo" class="payment-logo"> BRI Virtual Account
-        </div>
-    </div>
-            </div>
+          </div>
         </div>
 
-        <div class="right-section">
-            <h2>Ringkasan Belanja</h2>
-            <div class="summary">
-                <p><span>Total Harga (1 Barang)</span><span id="total-product-price">Rp80.000</span></p>
-                <p><span>Total Ongkos Kirim</span><span id="shipping-cost">Rp10.500</span></p>
-                <p><span>Asuransi Pengiriman</span><span>Rp600</span></p>
-                <hr>
-                <p><span>Biaya Layanan</span><span>Rp1.000</span></p>
-                <p><span>Biaya Jasa Aplikasi</span><span><s>Rp2.000</s> Rp1.000</span></p>
-                <hr>
-                <p class="total"><span>Total Tagihan</span><span id="total-price">Rp93.100</span></p>
-            </div>
-            <button class="pay-button" onclick="confirmPayment()"><span>🛡</span> Bayar</button>
+        <div class="shipping-container">
+          <h2>Pengiriman dan Pembayaran</h2>
+
+          <div class="address-info">
+            <span class="label">Utama</span> Kosan - Muhammad Dany
+            (62822323693648)
+            <p>jalan Gegerkalong Girang, No. 9 RT.03/RW.06, Isola, Sukasari</p>
+          </div>
+          <div class="option-container">
+            <label for="shipping-option" class="option-label"
+              >Pilih Pengiriman</label
+            >
+            <select
+              id="shipping-option"
+              class="custom-select"
+              onchange="updateShipping()"
+            >
+              <option value="10500">Reguler (Rp10.500)</option>
+              <option value="15000">Kilat (Rp15.000)</option>
+              <option value="20000">Express (Rp20.000)</option>
+            </select>
+          </div>
+
+          <div class="option-container">
+            <label for="courier-option" class="option-label">Pilih Kurir</label>
+            <select
+              id="courier-option"
+              class="custom-select"
+              onchange="updateCourier()"
+            >
+              <option value="AnterAja">AnterAja</option>
+              <option value="JNE">JNE</option>
+              <option value="SiCepat">SiCepat</option>
+            </select>
+            <p class="delivery-time" id="delivery-time">
+              Estimasi tiba 1 - 3 Nov
+            </p>
+          </div>
+          <!-- Pilih Pembayaran -->
+          <div class="option-container">
+            <label for="payment-option" class="option-label"
+              >Pilih Pembayaran</label
+            >
+            <select
+              id="payment-option"
+              class="custom-select"
+              onchange="updatePayment()"
+            >
+              <option value="BRI Virtual Account">BRI Virtual Account</option>
+              <option value="Mandiri Virtual Account">
+                Mandiri Virtual Account
+              </option>
+              <option value="OVO">OVO</option>
+              <option value="Gopay">Gopay</option>
+            </select>
+          </div>
         </div>
+      </div>
+
+      <div class="right-section">
+        <h2>Ringkasan Belanja</h2>
+        <div class="summary">
+          <p>
+            <span>Total Harga (Barang)</span
+            ><span id="total-product-price">Rp80.000</span>
+          </p>
+          <p>
+            <span>Total Ongkos Kirim</span
+            ><span id="shipping-cost">Rp10.500</span>
+          </p>
+          <p><span>Asuransi Pengiriman</span><span>Rp600</span></p>
+          <hr />
+          <p><span>Biaya Layanan</span><span>Rp1.000</span></p>
+          <p>
+            <span>Biaya Jasa Aplikasi</span><span><s>Rp2.000</s> Rp1.000</span>
+          </p>
+          <hr />
+          <p class="total">
+            <span>Total Tagihan</span><span id="total-price">Rp93.100</span>
+          </p>
+        </div>
+        <button class="pay-button" onclick="confirmPayment()">
+          <span>🛡</span> Bayar
+        </button>
+      </div>
     </div>
 
     <script src="checkout.js"></script>
-</body>
+  </body>
 </html>
