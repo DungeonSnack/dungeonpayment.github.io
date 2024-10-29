@@ -38,10 +38,10 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url('/assets/img/market.jpg');
-    background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
-    background-position: center; /* Untuk posisi gambar di tengah */
-    background-repeat: no-repeat; /* Agar gambar tidak berulang */
+  background-image: url("/assets/img/market.jpg");
+  background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
+  background-position: center; /* Untuk posisi gambar di tengah */
+  background-repeat: no-repeat; /* Agar gambar tidak berulang */
 }
 
 .container {
@@ -54,7 +54,7 @@ body {
 .image-section {
   width: 50%;
   position: relative;
-  margin:10px 0px;
+  margin: 10px 0px;
 }
 .image-wrapper {
   width: 100%;
@@ -89,14 +89,13 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.content-container span:hover{
+.content-container span:hover {
   color: #16164d;
   background: var(--primary-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 @media screen and (max-width: 60rem) {
   .container {
@@ -114,7 +113,7 @@ body {
   padding: 2.5rem 1rem;
   display: flex;
   align-items: center;
-  margin:10px 0px;
+  margin: 10px 0px;
 }
 
 .form-wrapper {

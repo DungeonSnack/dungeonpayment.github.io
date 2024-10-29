@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="drink.css">
-    <link rel="icon" href="../../../assets/img/logodugeon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="drink.css" />
+    <link
+      rel="icon"
+      href="../../../assets/img/logodugeon.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <title>Minuman😍</title>
-</head>
-<body>
-  <div class="navbar">
-    <div class="logo">
-      <img src="../../../assets/img/truelogo.png" alt="logo" />
-    </div>
-    <button class="hamburger">
-      <span></span> <span></span> <span></span>
-    </button>
-    <div class="menu-nav">
-      <a href="/index.html">Home</a>
-      <div class="dropdown">
-        <a href="#svc" class="dropbtn">Product</a>
-        <div class="dropdown-content">
-          <a href="/src/page/product/food.html">Makanan</a>
-          <a href="/src/page/product/drink.html">Minuman</a>
-        </div>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="../../../assets/img/truelogo.png" alt="logo" />
       </div>
-      <a href="/index.html#about">About</a>
-      <a href="/index.html#contact">Contact</a>
+      <button class="hamburger">
+        <span></span> <span></span> <span></span>
+      </button>
+      <div class="menu-nav">
+        <a href="/index.html">Home</a>
+        <div class="dropdown">
+          <a href="#svc" class="dropbtn">Product</a>
+          <div class="dropdown-content">
+            <a href="/src/page/product/food.html">Makanan</a>
+            <a href="/src/page/product/drink.html">Minuman</a>
+          </div>
+        </div>
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#contact">Contact</a>
+      </div>
+      <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
     </div>
-    <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
-  </div>
-   <!-- Elemen Loading -->
- <div id="loading" class="loading" style="display: none;">
-  <p>Loading...</p>
-</div>
+    <!-- Elemen Loading -->
+    <div id="loading" class="loading" style="display: none">
+      <p>Loading...</p>
+    </div>
 
     <div class="hero2">
       <div class="swiper">
@@ -94,158 +98,226 @@
     </div>
 
     <div class="menus" id="minuman">
-        <div class="menu">
-            <div class="image-container">
-                <img src="../../../assets/img/drink_2.jpg" alt="Profile Photo">
-            </div>
-            <div class="content">
-                <h2 class="food-name">Teh Ala Miras</h2>
-                <p class="food-title">Teh Manis Ala Miras</p>
-                <p class="description" id="desc1">
-                   Rasakan Sensasi Seperti Minum Miras, Tapi Sebenarnya Itu Hanyalah Teh Manis Yang Diisikan
-                   Kedalam Gelas Miras, Akwkakwkakkw, RASAKAN SENSASINYA!!!, MANTAPP POLLL
-                </p>
-                  <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn1" onclick="toggleDescription(1)">Lihat lebih banyak</a>
-                <p class="price">Harga: <strong>Rp25.000</strong></p>
-                <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
-            </div>
-        </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink3.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink_2.jpg" alt="Profile Photo" />
+        </div>
+        <div class="content">
+          <h2 class="food-name">Teh Ala Miras</h2>
+          <p class="food-title">Teh Manis Ala Miras</p>
+          <p class="description" id="desc1">
+            Rasakan Sensasi Seperti Minum Miras, Tapi Sebenarnya Itu Hanyalah
+            Teh Manis Yang Diisikan Kedalam Gelas Miras, Akwkakwkakkw, RASAKAN
+            SENSASINYA!!!, MANTAPP POLLL
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn1"
+            onclick="toggleDescription(1)"
+            >Lihat lebih banyak</a
+          >
+          <p class="price">Harga: <strong>Rp25.000</strong></p>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="image-container">
+          <img src="../../../assets/img/drink3.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Sprite n Nipiezz</h2>
           <p class="food-title">Sprite dan JEroek Nipiezz</p>
           <p class="description" id="desc2">
-            Segarkan Hari Anda Dengan Minuman Sprite Yang Segar Dipadukan Dengan Jeruk Nipis, 
-            Memberikan Sensasi Asam Manis Yang Menggugah Selera, Akwkakwkakkw, RASAKAN KESEGARANNYA!!
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn2" onclick="toggleDescription(2)">Lihat lebih banyak</a>
+            Segarkan Hari Anda Dengan Minuman Sprite Yang Segar Dipadukan Dengan
+            Jeruk Nipis, Memberikan Sensasi Asam Manis Yang Menggugah Selera,
+            Akwkakwkakkw, RASAKAN KESEGARANNYA!!
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn2"
+            onclick="toggleDescription(2)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink4.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink4.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Orange Range</h2>
           <p class="food-title">Jeruk dan Jeruk</p>
           <p class="description" id="desc3">
-            Nikmati Kesegaran Es Jeruk Dengan Potongan Jeruk Slice Di Dalamnya, 
-            Memberikan Rasa Manis Dan Asam Yang Sempurna Dalam Setiap Tegukan, 
+            Nikmati Kesegaran Es Jeruk Dengan Potongan Jeruk Slice Di Dalamnya,
+            Memberikan Rasa Manis Dan Asam Yang Sempurna Dalam Setiap Tegukan,
             Dan Rasakan Sensasi Yang Menyegarkan!
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn3" onclick="toggleDescription(3)">Lihat lebih banyak</a>
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn3"
+            onclick="toggleDescription(3)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink5.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink5.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Toples Orange</h2>
           <p class="food-title">Orange in Da Haws</p>
           <p class="description" id="desc4">
-            Segarkan Diri Anda Dengan Es Jeruk Yang Dipadukan Dengan Ekstrak Lemon, 
-            Menawarkan Rasa Asam Segar Yang Membuat Setiap Tegukan Begitu Menggugah Selera, 
-            Siap Memanjakan Lidah Anda!
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn4" onclick="toggleDescription(4)">Lihat lebih banyak</a>
+            Segarkan Diri Anda Dengan Es Jeruk Yang Dipadukan Dengan Ekstrak
+            Lemon, Menawarkan Rasa Asam Segar Yang Membuat Setiap Tegukan Begitu
+            Menggugah Selera, Siap Memanjakan Lidah Anda!
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn4"
+            onclick="toggleDescription(4)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink6.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink6.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Kopi Kenangan Mantan</h2>
           <p class="food-title">Americano V14</p>
           <p class="description" id="desc5">
-            Panas dan Pahitnya Kopi, Yang Menusuk Indra Perasa
-              Membuat Kamu Seakan Ingat Kembali Kenangan Dengan si Dia Yang Meninggalkanmu.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn5" onclick="toggleDescription(5)">Lihat lebih banyak</a>
+            Panas dan Pahitnya Kopi, Yang Menusuk Indra Perasa Membuat Kamu
+            Seakan Ingat Kembali Kenangan Dengan si Dia Yang Meninggalkanmu.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn5"
+            onclick="toggleDescription(5)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink7.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink7.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Es Teh Solo Super Specialz</h2>
           <p class="food-title">Es Teh Manis Super</p>
           <p class="description" id="desc6">
-            Dingin segarnya es teh yang manis dan lemon asam yang menggigit, mengingatkan kamu akan kesendirian 
-              tetapi masih menikmati hidup.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn6" onclick="toggleDescription(6)">Lihat lebih banyak</a>
+            Dingin segarnya es teh yang manis dan lemon asam yang menggigit,
+            mengingatkan kamu akan kesendirian tetapi masih menikmati hidup.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn6"
+            onclick="toggleDescription(6)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink8.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink8.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Es Kolang Kaling Biru</h2>
           <p class="food-title">Es Kolang Kaling</p>
           <p class="description" id="desc7">
-            Hadir Dengan Warna Birunya Tenang Kayak Laut,
-               Setiap Tegukan Mengingatkan Bahwa Hidup Santai, Nikmati Aja, Nggak Usah Buru-Buru.
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn7" onclick="toggleDescription(7)">Lihat lebih banyak</a>
+            Hadir Dengan Warna Birunya Tenang Kayak Laut, Setiap Tegukan
+            Mengingatkan Bahwa Hidup Santai, Nikmati Aja, Nggak Usah Buru-Buru.
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn7"
+            onclick="toggleDescription(7)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
       <div class="menu">
         <div class="image-container">
-          <img src="../../../assets/img/drink9.jpg" alt="Profile Photo">
+          <img src="../../../assets/img/drink9.jpg" alt="Profile Photo" />
         </div>
         <div class="content">
           <h2 class="food-name">Plant's Blood</h2>
           <p class="food-title">Jus Strawberry</p>
           <p class="description" id="desc8">
-            Nikmati Kesegaran Jus Strawberry Yang Dipadukan Dengan Jeruk Nipis Dalam Gelas Besar, 
-            Menciptakan Kombinasi Rasa Yang Siap Menggugah Semangat Di Setiap Tegukan!
-        </p>
-          <a href="javascript:void(0);" class="toggle-btn" id="toggle-btn8" onclick="toggleDescription(8)">Lihat lebih banyak</a>
+            Nikmati Kesegaran Jus Strawberry Yang Dipadukan Dengan Jeruk Nipis
+            Dalam Gelas Besar, Menciptakan Kombinasi Rasa Yang Siap Menggugah
+            Semangat Di Setiap Tegukan!
+          </p>
+          <a
+            href="javascript:void(0);"
+            class="toggle-btn"
+            id="toggle-btn8"
+            onclick="toggleDescription(8)"
+            >Lihat lebih banyak</a
+          >
           <p class="price">Harga: <strong>Rp25.000</strong></p>
-          <button class="order-btn" onclick="checkLogin()">Pesan Sekarang</button>
+          <button class="order-btn" onclick="checkLogin()">
+            Pesan Sekarang
+          </button>
         </div>
       </div>
     </div>
 
-     <!-- Modal Login Alert -->
-     <div class="modal" id="modalAlert">
+    <!-- Modal Login Alert -->
+    <div class="modal" id="modalAlert">
       <div class="modal-konten">
-          <span class="tutup-btn" id="tutupModal">&times;</span>
-          <div class="modal-header">
-              <div class="icon-check">
-                &#215;
-              </div>
-              <p class="modal-teks">
-                  Anda harus login terlebih dahulu untuk melakukan pemesanan.
-                  <br><a href="/src/page/login/login.html" id="loginLink" class="modal-link">Login Sekarang</a>
-              </p>
-          </div>
+        <span class="tutup-btn" id="tutupModal">&times;</span>
+        <div class="modal-header">
+          <div class="icon-check">&#215;</div>
+          <p class="modal-teks">
+            Anda harus login terlebih dahulu untuk melakukan pemesanan.
+            <br /><a
+              href="/src/page/login/login.html"
+              id="loginLink"
+              class="modal-link"
+              >Login Sekarang</a
+            >
+          </p>
+        </div>
       </div>
-  </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/src/helper/helper.js"></script>
     <script src="/assets/js/index.js"></script>
-
-</body>
-
+  </body>
 </html>

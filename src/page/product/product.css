@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
 * {
@@ -10,142 +10,141 @@
   font-weight: 400;
   text-decoration: none;
   scroll-behavior: smooth;
- 
 }
 
 body::-webkit-scrollbar {
-    width: var(--sb-size);
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
-        background: var(--sb-track-color);
-        border-radius: 1px;
+  background: var(--sb-track-color);
+  border-radius: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 1px;
-    }
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
 @supports not selector(::-webkit-scrollbar) {
-        body {
-          scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
- }
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 body {
-        width: 100%;
-        height: auto;
-        overflow-y: auto;
-        overflow-x: hidden;
-        --sb-track-color: #ffffff;
-        --sb-thumb-color: #ffffff;
-        --sb-size: 1px;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #ffffff;
+  --sb-size: 1px;
 }
 
 .hero {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("/assets/img/foods.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    background-attachment: fixed;
-  }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("/assets/img/foods.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-attachment: fixed;
+}
 
-  .hero .swiper {
-    margin-top: 4vw;
-    width: 95%;
-    height: 70vh;
-    border-radius: 30px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --swiper-navigation-color: black;
-  }
-  
-  .hero .swiper .swiper-wrapper {
-    width: 100%;
-    height: inherit;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide a {
-    display: none;
-    z-index: 2;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(0);
-    transition: 0.3s ease-in-out all;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide:hover img,
-  .hero .swiper .swiper-wrapper .swiper-slide:hover .overlay {
-    opacity: 1;
-    filter: brightness(0.5);
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
-    color: white; /* Warna teks */
-    display: flex; /* Menggunakan flexbox untuk memusatkan teks */
-    align-items: center; /* Memusatkan secara vertikal */
-    justify-content: center; /* Memusatkan secara horizontal */
-    opacity: 0; /* Awalnya tersembunyi */
-    transition: opacity 0.3s; /* Efek transisi */
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge {
-    position: absolute;
-    top: 7px; /* Jarak dari atas */
-    right: 10px; /* Jarak dari kanan */
-    /* background-color: red; Warna latar belakang */
-    color: gold; /* Warna teks */
-    padding: 5px 10px; /* Ruang di dalam badge */
-    border-radius: 5px; /* Sudut melingkar */
-    transform: rotate(10deg); /* Memutar badge */
-    font-weight: bold; /* Teks tebal */
-    z-index: 10; /* Pastikan badge di atas overlay */
-    transition: background-color 0.3s; /* Efek transisi pada warna latar */
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    opacity: 0;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
-    background-color: darkred;
-  }
-  .hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
-    background-color: darkred;
-    opacity: 1;
-  }
-  
-  .hero .swiper .swiper-wrapper .swiper-slide:hover a {
-    display: block;
-  }
+.hero .swiper {
+  margin-top: 4vw;
+  width: 95%;
+  height: 70vh;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --swiper-navigation-color: black;
+}
 
+.hero .swiper .swiper-wrapper {
+  width: 100%;
+  height: inherit;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide a {
+  display: none;
+  z-index: 2;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0);
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide:hover img,
+.hero .swiper .swiper-wrapper .swiper-slide:hover .overlay {
+  opacity: 1;
+  filter: brightness(0.5);
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
+  color: white; /* Warna teks */
+  display: flex; /* Menggunakan flexbox untuk memusatkan teks */
+  align-items: center; /* Memusatkan secara vertikal */
+  justify-content: center; /* Memusatkan secara horizontal */
+  opacity: 0; /* Awalnya tersembunyi */
+  transition: opacity 0.3s; /* Efek transisi */
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide .overlay .badge {
+  position: absolute;
+  top: 7px; /* Jarak dari atas */
+  right: 10px; /* Jarak dari kanan */
+  /* background-color: red; Warna latar belakang */
+  color: gold; /* Warna teks */
+  padding: 5px 10px; /* Ruang di dalam badge */
+  border-radius: 5px; /* Sudut melingkar */
+  transform: rotate(10deg); /* Memutar badge */
+  font-weight: bold; /* Teks tebal */
+  z-index: 10; /* Pastikan badge di atas overlay */
+  transition: background-color 0.3s; /* Efek transisi pada warna latar */
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
+  opacity: 0;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
+  background-color: darkred;
+}
+.hero .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
+  background-color: darkred;
+  opacity: 1;
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide:hover a {
+  display: block;
+}
 
 .navbar {
   display: flex;
@@ -160,299 +159,281 @@ body {
   position: sticky;
   z-index: 1000;
   top: 0;
-  
-  }
+}
 
-  .logo {
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    stroke: #0f0f0f;
-    stroke-width: 10px;
-    text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
+.logo {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  stroke: #0f0f0f;
+  stroke-width: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  }
-  
-  .logo img {
-    width: 10vw;
-    height: 5vw;
-   
-  }
-  
-  .navbar .menu-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-  
-  }
-  
-  .hamburger {
-    display: none; /* Hide by default */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-  }
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white; /* Adjust color as needed */
-    margin: 5px 0;
-  }
-  
-  .navbar .menu-nav a {
-    text-decoration: none;
-    color: #EC0B43;
-    font-size: 20px;
-    font-weight: 500;
-    transition: 0.3s;
-    margin-left: 20px;
-    position: relative; 
-    margin-right:50px;
-    padding: 5px 0px 0px 0px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .menu-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: #EC0B43; 
-    transition: width 0.3s ease;
-  }
-  
-  .navbar .menu-nav a:hover::after {
-    width: 100%; 
-  }
-  
-  .navbar .menu-nav a:hover {
-    color: #EC0B43; 
-  }
+}
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 14px 20px;
-    font-size: 16px;
-  }
-  
-   
-  .dropdown-content {
-    background-color: #fceef1;
-    font-size: 10px;
-    display: none;
-    border-radius: 20px;
-    position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    padding:25px 0px 20px 10px;
-    opacity: 0;  
-    transform: translateY(-10px);  
-    z-index: 1;
-    transition: opacity 0.4s ease, transform 0.4s ease;  
-  }
-  
-   
-  .dropdown-content a {
-    padding: 14px 16px;
-    margin-bottom:10px;
-    text-decoration: none;
-    color: black; 
-    display: block;
-    font-size: 16px; 
-  }
-  
-   
-  .dropdown-content a:hover {
-    color: white; 
-  }
-  
-   
-  .dropdown:hover .dropdown-content {
-    display: block;
-    opacity: 1;  
-    transform: translateY(0); 
-  }
-  
-   
-  .dropdown-content {
-    display: block;
-    opacity: 0;
-    transform: translateY(-10px);  
-  }
+.logo img {
+  width: 10vw;
+  height: 5vw;
+}
 
-  .loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #ec0b43; /* Warna teks loading */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    z-index: 9999; /* Pastikan berada di atas elemen lain */
-  }
-  
-  
-  .tombol-login {
-    display: flex;
-    width:160px;
-    justify-content: center;
-    align-items: center;
-    /* font-family: ; */
-    font-weight:900;
-    padding:10px 10px;
-    background-color:#58355E;
-    border-radius:10px;
-    cursor: pointer;
-    transition: 0.5s ease;
-  }
-  
-  .tombol-login:hover {
-    background-color: #331f37;
-    
-  }
-  
-  .tombol-login a{
-    color:#ffff;
-    
-  }
+.navbar .menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
 
+.hamburger {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white; /* Adjust color as needed */
+  margin: 5px 0;
+}
 
-  .menus{
-    height: 100vh;
-    color: white;
-    align-items: center;
-    display: grid;
-    /* grid-auto-flow: column; */
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    padding: 50px 50px 30px 50px;
-    gap:30px;
-  }
+.navbar .menu-nav a {
+  text-decoration: none;
+  color: #ec0b43;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-left: 20px;
+  position: relative;
+  margin-right: 50px;
+  padding: 5px 0px 0px 0px;
+  transition: color 0.3s ease;
+}
 
-  .menu {
-    background-color:#fffdef ;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    text-align: center;
-    /* overflow: hidden; */
-    width: 100%; 
-    margin-bottom: 20px; 
-    box-sizing: border-box; 
-    padding: 10px;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  
-  }
+.navbar .menu-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ec0b43;
+  transition: width 0.3s ease;
+}
 
-  .image-container {
-    width: 100%;
-    height: 250px;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
+.navbar .menu-nav a:hover::after {
+  width: 100%;
+}
 
- 
-  .content {
-    padding: 20px 16px;
-  }
-  
-  .food-name {
-    font-size: 26px;
-    font-weight:800;
-    margin-bottom: 4px;
-    color:#010101;
-  }
-  .food-title {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #ceac23;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .description {
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: #9e9e9e; 
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.navbar .menu-nav a:hover {
+  color: #ec0b43;
+}
 
-  .toggle-btn {
-    color: #ff9900;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 5px;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  background-color: #fceef1;
+  font-size: 10px;
+  display: none;
+  border-radius: 20px;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding: 25px 0px 20px 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dropdown-content a {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ec0b43; /* Warna teks loading */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 9999; /* Pastikan berada di atas elemen lain */
+}
+
+.tombol-login {
+  display: flex;
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+  /* font-family: ; */
+  font-weight: 900;
+  padding: 10px 10px;
+  background-color: #58355e;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.tombol-login:hover {
+  background-color: #331f37;
+}
+
+.tombol-login a {
+  color: #ffff;
+}
+
+.menus {
+  height: 100vh;
+  color: white;
+  align-items: center;
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding: 50px 50px 30px 50px;
+  gap: 30px;
+}
+
+.menu {
+  background-color: #fffdef;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  /* overflow: hidden; */
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 20px 16px;
+}
+
+.food-name {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #010101;
+}
+.food-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ceac23;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.description {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #9e9e9e;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle-btn {
+  color: #ff9900;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .toggle-btn:hover {
   text-decoration: underline;
 }
-  .price {
-    display: block !important;
-    font-size: 1.2em !important;
-    font-weight: bold !important;
-    margin-bottom: 15px !important;
-    margin-top:15px;
-    color: #333 !important;
+.price {
+  display: block !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  margin-bottom: 15px !important;
+  margin-top: 15px;
+  color: #333 !important;
 }
 
-
-  .order-btn {
-    background-color: #ceac23;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+.order-btn {
+  background-color: #ceac23;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .order-btn:hover {
-    background-color: #b38b1e;
+  background-color: #b38b1e;
 }
 
 /* Gaya untuk modal */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -462,8 +443,8 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
-  opacity: 0; 
-  transition: opacity 0.5s ease; 
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .modal-konten {
@@ -473,77 +454,74 @@ body {
   width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  transform: translateY(-30px); 
-  opacity: 0; 
-  transition: transform 0.5s ease, opacity 0.5s ease; 
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .modal-show {
-  display: flex; 
-  opacity: 1; 
+  display: flex;
+  opacity: 1;
 }
 
 .modal-show .modal-konten {
-  transform: translateY(0); 
-  opacity: 1; 
+  transform: translateY(0);
+  opacity: 1;
 }
 
-  .modal-header {
-    display: flex;
-    align-items: center;
+.modal-header {
+  display: flex;
+  align-items: center;
+}
+
+.icon-check {
+  font-size: 34px;
+  background-color: #ffb5b5;
+  color: #ff0000;
+  padding: 10px 20px;
+  border-radius: 20%;
+  margin-right: 15px;
+}
+
+.modal-teks {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.modal-link {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+}
+
+.tutup-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.tutup-btn:hover {
+  color: #555;
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    width: 48%; /* Jika layar lebih kecil, tampilkan 2 card per baris */
   }
+}
 
-  .icon-check {
-    font-size: 34px;
-    background-color: #ffb5b5;
-    color: #ff0000;
-    padding: 10px 20px;
-    border-radius: 20%;
-    margin-right: 15px;
+@media (max-width: 768px) {
+  .menu {
+    width: 100%; /* Pada layar kecil, card akan tampil satu per baris */
   }
-
-  .modal-teks {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-  }
-
-  .modal-link {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .modal-link:hover {
-    text-decoration: underline;
-  }
-
-  .tutup-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #888;
-  }
-
-  .tutup-btn:hover {
-    color: #555;
-  }
-
-
-
-
-  @media (max-width: 1200px) {
-    .menu {
-      width: 48%; /* Jika layar lebih kecil, tampilkan 2 card per baris */
-    }
-  }
-
-  @media (max-width: 768px) {
-    .menu {
-      width: 100%; /* Pada layar kecil, card akan tampil satu per baris */
-    }
-  }
+}
