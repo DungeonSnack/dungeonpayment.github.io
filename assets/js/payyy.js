@@ -1,4 +1,4 @@
-const swiper = new Swiper(".hero2 .swiper", {
+const swiper = new Swiper(".set .swiper", {
     // Optional parameters=
     loop: true,
     autoplay: {
