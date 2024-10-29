@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konfirmasi Pembayaran</title>
-  <link rel="stylesheet" href="confirmation.css" />
-</head>
-<body>
-  <div class="confirmation-container">
-    <div class="message-box">
-      <h1>🎉 Pembayaran Berhasil!</h1>
-      <p>Terima kasih telah melakukan pembayaran.</p>
-      <div class="summary">
-        <h2>Ringkasan Pembelian</h2>
-        <p><strong>Nama Produk:</strong> Payung Tenda 180 CM Jualan Taman Pantai Cafe Bazar Lapak HUGO - Merah - UV</p>
-        <p><strong>Jumlah Barang:</strong> <span id="confirm-quantity">1</span></p>
-        <p><strong>Total Harga Produk:</strong> <span id="confirm-total-product-price">Rp80.000</span></p>
-        <p><strong>Total Ongkos Kirim:</strong> <span id="confirm-shipping-cost">Rp10.500</span></p>
-        <p><strong>Total Tagihan:</strong> <span id="confirm-total-price">Rp93.100</span></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfirmasi Pembayaran</title>
+    <link rel="stylesheet" href="confirmation.css" />
+  </head>
+  <body>
+    <div class="confirmation-container">
+      <div class="message-box">
+        <div class="checkmark">✔️</div>
+        <h1>Pembayaran Berhasil!</h1>
+        <p>Terima kasih telah berbelanja dengan kami.</p>
+
+        <!-- Ringkasan Pembelian -->
+        <div class="summary">
+          <h2>Ringkasan Pembelian</h2>
+          <div class="summary-item">
+            <span class="label">Nama Produk:</span>
+            <span class="value">Payung Tenda 180 CM - Merah - UV</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Jumlah Barang:</span>
+            <span class="value" id="confirm-quantity">1</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Total Harga Produk:</span>
+            <span class="value" id="confirm-total-product-price">Rp80.000</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Total Ongkos Kirim:</span>
+            <span class="value" id="confirm-shipping-cost">Rp10.500</span>
+          </div>
+          <div class="summary-item total">
+            <span class="label">Total Tagihan:</span>
+            <span class="value" id="confirm-total-price">Rp93.100</span>
+          </div>
+        </div>
+
+        <!-- Tombol -->
+        <a href="index.html" class="back-button">Kembali ke Halaman Utama</a>
       </div>
-      <a href="index.html" class="back-button">Kembali ke Halaman Utama</a>
     </div>
-  </div>
 
-  <script>
-    // Mengambil data dari Local Storage jika disimpan
-    const totalProductPrice = localStorage.getItem("totalProductPrice");
-    const shippingCost = localStorage.getItem("shippingCost");
-    const totalPrice = localStorage.getItem("totalPrice");
-    const quantity = localStorage.getItem("quantity");
+    <script>
+      // Mengambil data dari Local Storage
+      const totalProductPrice = localStorage.getItem("totalProductPrice");
+      const shippingCost = localStorage.getItem("shippingCost");
+      const totalPrice = localStorage.getItem("totalPrice");
+      const quantity = localStorage.getItem("quantity");
 
-    // Memperbarui elemen di halaman dengan data dari Local Storage
-    document.getElementById("confirm-total-product-price").innerText = `Rp${parseInt(totalProductPrice).toLocaleString("id-ID")}`;
-    document.getElementById("confirm-shipping-cost").innerText = `Rp${parseInt(shippingCost).toLocaleString("id-ID")}`;
-    document.getElementById("confirm-total-price").innerText = `Rp${parseInt(totalPrice).toLocaleString("id-ID")}`;
-    document.getElementById("confirm-quantity").innerText = quantity;
-  </script>
-</body>
+      // Memperbarui elemen di halaman dengan data dari Local Storage
+      document.getElementById(
+        "confirm-total-product-price"
+      ).innerText = `Rp${parseInt(totalProductPrice).toLocaleString("id-ID")}`;
+      document.getElementById(
+        "confirm-shipping-cost"
+      ).innerText = `Rp${parseInt(shippingCost).toLocaleString("id-ID")}`;
+      document.getElementById("confirm-total-price").innerText = `Rp${parseInt(
+        totalPrice
+      ).toLocaleString("id-ID")}`;
+      document.getElementById("confirm-quantity").innerText = quantity;
+    </script>
+  </body>
 </html>
