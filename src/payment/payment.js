@@ -1,3 +1,5 @@
+
+
 // Fungsi untuk memeriksa apakah user telah login atau belum
 function checkLoginStatus() {
     // Misalnya, kita menggunakan localStorage untuk menyimpan status login
@@ -107,16 +109,4 @@ document.querySelectorAll('.faq-question').forEach((item) => {
     });
 });
 
-const swiper = new Swiper(".swiper", {
-    // Optional parameters=
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+

@@ -678,9 +678,9 @@ footer {
     transform: translateY(0); /* Kembali ke posisi normal */
 }
 
-.title .swiper {
-    width: 95%;
-    height: 70vh;
+.set .swiper {
+    width: fit-content;
+    height: fit-content;
     border-radius: 30px;
     position: relative;
     display: flex;
@@ -689,23 +689,23 @@ footer {
     --swiper-navigation-color: black;
   }
   
-  .title .swiper .swiper-wrapper {
+.set .swiper .swiper-wrapper {
     width: 100%;
     height: inherit;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide {
+.set .swiper .swiper-wrapper .swiper-slide {
     position: relative;
     width: 100%;
     height: 100%;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide a {
+.set .swiper .swiper-wrapper .swiper-slide a {
     display: none;
     z-index: 2;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide img {
+ .set .swiper .swiper-wrapper .swiper-slide img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -715,13 +715,13 @@ footer {
     z-index: 1;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide:hover img,
-  .title .swiper .swiper-wrapper .swiper-slide:hover .overlay {
+.set .swiper .swiper-wrapper .swiper-slide:hover img,
+.set .swiper .swiper-wrapper .swiper-slide:hover .overlay {
     opacity: 1;
     filter: brightness(0.5);
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide .overlay {
+ .set .swiper .swiper-wrapper .swiper-slide .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -736,7 +736,7 @@ footer {
     transition: opacity 0.3s; /* Efek transisi */
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide .overlay .badge {
+.set .swiper .swiper-wrapper .swiper-slide .overlay .badge {
     position: absolute;
     top: 7px; /* Jarak dari atas */
     right: 10px; /* Jarak dari kanan */
@@ -750,18 +750,18 @@ footer {
     transition: background-color 0.3s; /* Efek transisi pada warna latar */
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
+.set .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
     opacity: 0;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
+.set .swiper .swiper-wrapper .swiper-slide .overlay .badge:hover {
     background-color: darkred;
   }
-  .title .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
+.set .swiper .swiper-wrapper .swiper-slide .overlay .badge .boverlay {
     background-color: darkred;
     opacity: 1;
   }
   
-  .title .swiper .swiper-wrapper .swiper-slide:hover a {
+.set .swiper .swiper-wrapper .swiper-slide:hover a {
     display: block;
   }
