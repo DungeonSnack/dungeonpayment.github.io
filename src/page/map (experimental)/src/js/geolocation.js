@@ -1,14 +1,13 @@
-import Feature from "https://cdn.skypack.dev/ol/Feature.js";
-import Point from "https://cdn.skypack.dev/ol/geom/Point.js";
-import VectorSource from "https://cdn.skypack.dev/ol/source/Vector.js";
-import { Vector as VectorLayer } from "https://cdn.skypack.dev/ol/layer.js";
-import { fromLonLat } from "https://cdn.skypack.dev/ol/proj.js";
-import { Style, Icon } from "https://cdn.skypack.dev/ol/style.js"; // Tambahkan ini
-import { map } from "../config/peta.js"; // Sesuaikan dengan jalur yang benar
+import { fromLonLat } from 'https://cdn.skypack.dev/ol/proj.js';
+import Feature from 'https://cdn.skypack.dev/ol/Feature.js';
+import Point from 'https://cdn.skypack.dev/ol/geom/Point.js';
+import VectorSource from 'https://cdn.skypack.dev/ol/source/Vector.js';
+import { Vector as VectorLayer } from 'https://cdn.skypack.dev/ol/layer.js';
+import { Style, Icon } from 'https://cdn.skypack.dev/ol/style.js';
 
 let userMarkerLayer; // Layer untuk marker pengguna
 
-export function getUserLocation() {
+export function getUserLocation(map) {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -16,7 +15,7 @@ export function getUserLocation() {
         const lonLat = fromLonLat(coords);
         map.getView().setCenter(lonLat);
         map.getView().setZoom(15); // Ubah zoom sesuai kebutuhan
-        addUserMarker(lonLat); // Tambahkan marker pengguna
+        addUserMarker(map, lonLat); // Kirim map ke addUserMarker
       },
       (error) => {
         console.error("Geolocation error:", error);
@@ -27,13 +26,13 @@ export function getUserLocation() {
   }
 }
 
-function addUserMarker(lonLat) {
+export function addUserMarker(map, lonLat) {
   // Buat layer untuk marker jika belum ada
   if (!userMarkerLayer) {
     userMarkerLayer = new VectorLayer({
       source: new VectorSource(),
     });
-    map.addLayer(userMarkerLayer);
+    map.addLayer(userMarkerLayer); // Pastikan map adalah objek peta yang valid
   }
 
   // Buat marker pengguna
@@ -48,7 +47,7 @@ function addUserMarker(lonLat) {
         anchor: [0.5, 46],
         anchorXUnits: "fraction",
         anchorYUnits: "pixels",
-        src: "/assets/img/iconp.png", // Ganti dengan jalur gambar icon pengguna
+        src: "../assets/img/iconp.png", // Jalur ikon yang benar
         scale: 0.3,
       }),
     })
@@ -57,11 +56,3 @@ function addUserMarker(lonLat) {
   // Tambahkan marker ke sumber layer
   userMarkerLayer.getSource().addFeature(userMarker);
 }
-
-export function getUserCoords() {
-  if (userMarkerLayer && userMarkerLayer.getSource().getFeatures().length > 0) {
-    return userMarkerLayer.getSource().getFeatures()[0].getGeometry().getCoordinates();
-  }
-  return null;
-}
-
