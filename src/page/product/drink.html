@@ -19,25 +19,29 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="logo">
-        <img src="../../../assets/img/truelogo.png" alt="logo" />
-      </div>
+      <div class="logo"><img src="./assets/img/truelogo.png" alt="logo" /></div>
       <button class="hamburger">
         <span></span> <span></span> <span></span>
       </button>
-      <div class="menu-nav">
-        <a href="/index.html">Home</a>
+      <div class="menu">
+        <a href="#hero">Home</a>
+
+        <!-- Dropdown untuk Product -->
         <div class="dropdown">
           <a href="#svc" class="dropbtn">Product</a>
           <div class="dropdown-content">
-            <a href="/src/page/product/food.html">Makanan</a>
-            <a href="/src/page/product/drink.html">Minuman</a>
+            <a href="./src/page/product/food.html">Makanan</a>
+            <a href="./src/page/product/drink.html">Minuman</a>
           </div>
         </div>
-        <a href="/index.html#about">About</a>
-        <a href="/index.html#contact">Contact</a>
+
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="./src/payment/payment.html">Payment</a>
       </div>
-      <div class="tombol-login"><a href="../login/login.css">Sign In</a></div>
+      <button class="tombol-login">
+        <a href="./src/page/login/login.html" id="loginButton">Sign In</a>
+      </button>
     </div>
     <!-- Elemen Loading -->
     <div id="loading" class="loading" style="display: none">
