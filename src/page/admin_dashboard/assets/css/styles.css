@@ -128,3 +128,39 @@
     display: inline-block;
     margin-right: 5px;
 }
+
+
+// order list //
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-section button {
+    background: #f8f9fa;
+    border: none;
+    color: #34a0a4;
+}
+.filter-section .dropdown-toggle {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+.table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+.badge-completed { background-color: #20c997; }
+.badge-processing { background-color: #6c63ff; }
+.badge-rejected { background-color: #dc3545; }
+.badge-on-hold { background-color: #ffc107; }
+.badge-in-transit { background-color: #17a2b8; }

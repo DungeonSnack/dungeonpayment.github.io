@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Order List</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar p-3">
+          <h3>Go<span class="text-dark">Biz</span></h3>
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="./dashboard.html">
+                <i class="bi bi-speedometer2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./stock_produk.html">
+                <i class="bi bi-grid"></i> Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-heart"></i> Favorites
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-chat-dots"></i> Inbox
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./order_list.html">
+                <i class="bi bi-list-check"></i> Order Lists
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-box-seam"></i> Product Stock
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="col-md-10 p-4">
+          <h2 class="mb-4">Order Lists</h2>
+
+          <!-- Filter Section -->
+          <div class="filter-section">
+            <button class="btn btn-outline-secondary">
+              <i class="bi bi-funnel-fill"></i> Filter By
+            </button>
+            <select class="form-select" aria-label="Date">
+              <option selected>Date</option>
+              <option value="1">Newest</option>
+              <option value="2">Oldest</option>
+            </select>
+            <select class="form-select" aria-label="Order Type">
+              <option selected>Order Type</option>
+              <option value="1">Book</option>
+              <option value="2">Mobile</option>
+              <option value="3">Electric</option>
+            </select>
+            <select class="form-select" aria-label="Order Status">
+              <option selected>Order Status</option>
+              <option value="1">Completed</option>
+              <option value="2">Processing</option>
+              <option value="3">Rejected</option>
+              <option value="4">On Hold</option>
+              <option value="5">In Transit</option>
+            </select>
+            <button class="btn text-danger"><i class="bi bi-arrow-counterclockwise"></i> Reset Filter</button>
+          </div>
+
+          <!-- Orders Table -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00001</td>
+                <td>Christine Brooks</td>
+                <td>089 Kutch Green Apt. 448</td>
+                <td>04 Sep 2019</td>
+                <td>Electric</td>
+                <td><span class="badge-status badge-completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>00002</td>
+                <td>Rosie Pearson</td>
+                <td>979 Immanuel Ferry Suite 526</td>
+                <td>28 May 2019</td>
+                <td>Book</td>
+                <td><span class="badge-status badge-processing">Processing</span></td>
+              </tr>
+              <tr>
+                <td>00003</td>
+                <td>Darrell Caldwell</td>
+                <td>8587 Frida Ports</td>
+                <td>23 Nov 2019</td>
+                <td>Medicine</td>
+                <td><span class="badge-status badge-rejected">Rejected</span></td>
+              </tr>
+              <!-- Additional rows here -->
+            </tbody>
+          </table>
+
+          <!-- Pagination -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">&laquo;</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
