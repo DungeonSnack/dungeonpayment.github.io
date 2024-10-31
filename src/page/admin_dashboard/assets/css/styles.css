@@ -68,3 +68,35 @@
 .stat-card .text-danger {
     color: #d9534f !important;
 }
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: none;
+    font-weight: bold;
+  }
+  .table tbody td {
+    vertical-align: middle;
+  }
+  .badge-status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  .badge-delivered {
+    background-color: #20c997;
+    color: white;
+  }
+  .badge-pending {
+    background-color: #ffc107;
+    color: white;
+  }
+  .badge-rejected {
+    background-color: #dc3545;
+    color: white;
+  }
+  .product-image {
+    width: 40px;
+    height: auto;
+    border-radius: 8px;
+  }
