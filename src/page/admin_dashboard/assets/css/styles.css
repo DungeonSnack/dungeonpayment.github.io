@@ -214,3 +214,49 @@
   .badge-social { background-color: #6f42c1; color: white; }
   .badge-work { background-color: #fd7e14; color: white; }
   .badge-friends { background-color: #e83e8c; color: white; }
+
+
+  .settings-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+  }
+  .profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .profile-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .profile-photo a {
+    display: block;
+    text-align: center;
+    color: #007bff;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-decoration: none;
+  }
+  .form-label {
+    font-weight: bold;
+    color: #6c757d;
+  }
+  .form-control {
+    border-radius: 8px;
+    background-color: #eef2f7;
+  }
+  .btn-submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #4d7cff;
+    color: white;
+    border: none;
+  }
