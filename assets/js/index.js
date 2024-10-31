@@ -45,9 +45,7 @@ function checkLogin() {
   }
 }
 
-var platform = new H.service.Platform({
-  apikey: "cXhOZ4MelJIu7NbET4wvzf_JauxSwF3zGRZv-kZvBKw", // Replace with your Here Maps API Key
-});
+
 
 var defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(
