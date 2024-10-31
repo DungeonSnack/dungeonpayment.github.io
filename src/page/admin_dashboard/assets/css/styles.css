@@ -164,3 +164,53 @@
 .badge-rejected { background-color: #dc3545; }
 .badge-on-hold { background-color: #ffc107; }
 .badge-in-transit { background-color: #17a2b8; }
+
+.sidebar {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  .sidebar h3 {
+    font-weight: bold;
+    color: #34a0a4;
+  }
+  .sidebar .nav-link {
+    color: #34a0a4;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .sidebar .nav-link.active {
+    background-color: #34a0a4;
+    color: white;
+  }
+  .sidebar .nav-link i {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  .sidebar .nav-link:hover {
+    background-color: #e0e0e0;
+    color: #34a0a4;
+  }
+  .inbox-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .search-bar {
+    width: 300px;
+  }
+  .inbox-table {
+    border-top: 1px solid #dee2e6;
+  }
+  .inbox-table .badge {
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  .badge-primary { background-color: #17a2b8; color: white; }
+  .badge-social { background-color: #6f42c1; color: white; }
+  .badge-work { background-color: #fd7e14; color: white; }
+  .badge-friends { background-color: #e83e8c; color: white; }

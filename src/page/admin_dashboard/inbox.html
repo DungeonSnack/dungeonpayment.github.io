@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inbox</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .sidebar {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+      }
+      .sidebar h3 {
+        font-weight: bold;
+        color: #34a0a4;
+      }
+      .sidebar .nav-link {
+        color: #34a0a4;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .sidebar .nav-link.active {
+        background-color: #34a0a4;
+        color: white;
+      }
+      .sidebar .nav-link i {
+        font-size: 1.2em;
+        margin-right: 10px;
+      }
+      .sidebar .nav-link:hover {
+        background-color: #e0e0e0;
+        color: #34a0a4;
+      }
+      .inbox-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      .search-bar {
+        width: 300px;
+      }
+      .inbox-table {
+        border-top: 1px solid #dee2e6;
+      }
+      .inbox-table .badge {
+        border-radius: 12px;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+      }
+      .badge-primary { background-color: #17a2b8; color: white; }
+      .badge-social { background-color: #6f42c1; color: white; }
+      .badge-work { background-color: #fd7e14; color: white; }
+      .badge-friends { background-color: #e83e8c; color: white; }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar p-3">
+          <h3>Go<span class="text-dark">Biz</span></h3>
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="./dashboard.html">
+                <i class="bi bi-speedometer2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./stock_produk.html">
+                <i class="bi bi-grid"></i> Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-heart"></i> Favorites
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="bi bi-chat-dots"></i> Inbox
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./order_list.html">
+                <i class="bi bi-list-check"></i> Order Lists
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-box-seam"></i> Product Stock
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Inbox content -->
+        <div class="col-md-10 p-4">
+          <h2 class="mb-4">Inbox</h2>
+
+          <!-- Toolbar -->
+          <div class="inbox-toolbar">
+            <input type="text" class="form-control search-bar" placeholder="Search mail">
+            <div>
+              <button class="btn btn-light"><i class="bi bi-sliders"></i></button>
+              <button class="btn btn-light"><i class="bi bi-info-circle"></i></button>
+              <button class="btn btn-light"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+
+          <!-- Inbox Table -->
+          <table class="table inbox-table">
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><i class="bi bi-star"></i></td>
+                <td>Jullu Jalal</td>
+                <td><span class="badge badge-primary">Primary</span></td>
+                <td>Our Bachelor of Commerce program is ACBSP-accredited.</td>
+                <td class="text-end">8:38 AM</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><i class="bi bi-star"></i></td>
+                <td>Minerva Barnett</td>
+                <td><span class="badge badge-work">Work</span></td>
+                <td>Get Best Advertiser In Your Side Pocket</td>
+                <td class="text-end">8:13 AM</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><i class="bi bi-star"></i></td>
+                <td>Peter Lewis</td>
+                <td><span class="badge badge-friends">Friends</span></td>
+                <td>Vacation Home Rental Success</td>
+                <td class="text-end">7:52 PM</td>
+              </tr>
+              <!-- Additional email rows here -->
+            </tbody>
+          </table>
+
+          <!-- Pagination -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">&laquo;</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
