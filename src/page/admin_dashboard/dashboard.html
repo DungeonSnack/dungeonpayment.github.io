@@ -4,89 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+        }
+        .card-stat {
+            border-radius: 8px;
+        }
+        .chart-placeholder {
+            height: 300px;
+            background-color: #f1f3f5;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Sidebar and Main Content Container -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h2 class="logo">DashStack</h2>
-            <nav>
-                <a href="#">Dashboard</a>
-                <a href="#">Products</a>
-                <a href="#">Favorites</a>
-                <a href="#">Inbox</a>
-                <a href="#">Order Lists</a>
-                <a href="#">Product Stock</a>
-                <a href="#">Settings</a>
-                <a href="#">Logout</a>
-            </nav>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Dashboard Stats -->
-            <div class="stats">
-                <div class="card">
-                    <h5>Total User</h5>
-                    <p class="stat-value">40,689</p>
-                    <p class="stat-change positive">↑ 8.5% Up from yesterday</p>
-                </div>
-                <div class="card">
-                    <h5>Total Order</h5>
-                    <p class="stat-value">10,293</p>
-                    <p class="stat-change positive">↑ 1.3% Up from past week</p>
-                </div>
-                <div class="card">
-                    <h5>Total Sales</h5>
-                    <p class="stat-value">$89,000</p>
-                    <p class="stat-change negative">↓ 4.3% Down from yesterday</p>
-                </div>
-                <div class="card">
-                    <h5>Total Pending</h5>
-                    <p class="stat-value">2,040</p>
-                    <p class="stat-change positive">↑ 1.8% Up from yesterday</p>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar p-3">
+                <h3 class="text-primary">DashStack</h3>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Lists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product Stock</a>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Sales Details Chart -->
-            <div class="card">
-                <h5>Sales Details</h5>
-                <canvas id="lineChart" class="line-chart"></canvas>
-            </div>
+            <!-- Main content -->
+            <div class="col-md-10 p-4">
+                <h2>Dashboard</h2>
 
-            <!-- Deals Details Table -->
-            <div class="card">
-                <h5>Deals Details</h5>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Location</th>
-                            <th>Date - Time</th>
-                            <th>Piece</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Apple Watch</td>
-                            <td>6096 Marjolaine Landing</td>
-                            <td>12.09.2019 - 12.53 PM</td>
-                            <td>423</td>
-                            <td>$34,295</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                        </tr>
-                        <!-- Tambahkan baris lain sesuai kebutuhan -->
-                    </tbody>
-                </table>
+                <!-- Statistics Cards -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card card-stat text-center p-3">
+                            <h5>Total User</h5>
+                            <h3>40,689</h3>
+                            <span class="text-success">⬆ 8.5% Up from yesterday</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card card-stat text-center p-3">
+                            <h5>Total Order</h5>
+                            <h3>10,293</h3>
+                            <span class="text-success">⬆ 1.3% Up from past week</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card card-stat text-center p-3">
+                            <h5>Total Sales</h5>
+                            <h3>$89,000</h3>
+                            <span class="text-danger">⬇ 4.3% Down from yesterday</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card card-stat text-center p-3">
+                            <h5>Total Pending</h5>
+                            <h3>2,040</h3>
+                            <span class="text-success">⬆ 1.8% Up from yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Details Chart -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Sales Details
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Deals Details Table -->
+                <div class="card">
+                    <div class="card-header">
+                        Deals Details
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Location</th>
+                                    <th>Date - Time</th>
+                                    <th>Piece</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Apple Watch</td>
+                                    <td>6096 Marjolaine Landing</td>
+                                    <td>12.09.2019 - 12:53 PM</td>
+                                    <td>423</td>
+                                    <td>$34,295</td>
+                                    <td><span class="badge bg-success">Delivered</span></td>
+                                </tr>
+                                <!-- Additional rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
