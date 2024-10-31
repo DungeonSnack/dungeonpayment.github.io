@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
   display: flex;
   justify-content: center;
@@ -17,6 +16,56 @@ body {
   padding: 10px;
 }
 
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 70px;
+  background-color: #fff;
+  color: #34a0a4;
+  width: 100%;
+  position: absolute  ;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  color:#34a0a4;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  width :9%;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: #34a0a4;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius:4px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover, .navbar-links .active {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Checkout Container */
 .checkout-container {
   display: flex;
   flex-direction: column;
@@ -26,6 +75,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 150px; /* Space for fixed navbar */
 }
 
 /* Responsiveness */
@@ -50,7 +100,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Different Containers */
+/* Product and Shipping Containers */
 .product-container,
 .shipping-container {
   background-color: #fdfdfd;
@@ -101,27 +151,6 @@ body {
   margin-top: 5px;
 }
 
-.note .quantity button {
-  background-color: #34a0a4;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin: 0 2px;
-}
-
-/* Animasi sederhana untuk tombol */
-.quantity button,
-.pay-button {
-  transition: transform 0.1s;
-}
-
-.quantity button:hover {
-  transform: scale(1.1);
-}
-
 .quantity-control {
   display: flex;
   align-items: center;
@@ -138,6 +167,11 @@ body {
   border-radius: 4px;
   font-size: 18px;
   cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.quantity-control button:hover {
+  transform: scale(1.1);
 }
 
 .quantity-control input {
@@ -148,29 +182,11 @@ body {
   padding: 5px;
 }
 
-/* Loading Animasi */
-.pay-button.loading {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* Menyembunyikan text saat loading */
-.pay-button.loading span {
-  display: none;
-}
-
-.pay-button.loading::after {
-  content: "Processing...";
-  font-size: 14px;
-  color: #666;
-}
-
 .protection a {
   color: #34a0a4;
   text-decoration: none;
 }
 
-/* Shipping Details */
 .address-info .label {
   background-color: #d8eefe;
   color: #34a0a4;
@@ -180,11 +196,7 @@ body {
   margin-right: 5px;
 }
 
-.shipping-options,
-.courier-options {
-  margin-top: 10px;
-}
-
+/* Options and Select Dropdown */
 .option-container {
   background-color: #f9f9f9;
   padding: 15px;
@@ -200,12 +212,6 @@ body {
   font-weight: 600;
   color: #333;
   margin-bottom: 8px;
-}
-
-.payment-method {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
 }
 
 .custom-select {
@@ -224,32 +230,6 @@ body {
 .custom-select:focus {
   border-color: #34a0a4;
   outline: none;
-}
-
-.payment-option {
-  display: flex;
-  align-items: center;
-}
-
-.payment-method {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-
-.payment-logo {
-  height: 24px;
-  width: auto;
-  margin-right: 10px;
-}
-
-.delivery-time {
-  font-size: 12px;
-  color: #555;
-  margin-top: 5px;
-  font-style: italic;
 }
 
 /* Summary Section */
@@ -288,7 +268,7 @@ hr {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s;
 }
 
 .pay-button:hover {
