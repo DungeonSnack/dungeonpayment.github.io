@@ -4,10 +4,10 @@
   }
   .sidebar h3 {
     font-weight: bold;
-    color: #6c63ff;
+    color: #34a0a4;
   }
   .sidebar .nav-link {
-    color: #333;
+    color: #34a0a4;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -15,8 +15,8 @@
     border-radius: 8px;
   }
   .sidebar .nav-link.active {
-    background-color: #6c63ff;
-    color: white !important;
+    background-color: #34a0a4;
+    color: white;
   }
   .sidebar .nav-link i {
     font-size: 1.2em;
@@ -24,5 +24,47 @@
   }
   .sidebar .nav-link:hover {
     background-color: #e0e0e0;
-    color: #333;
+    color: #34a0a4;
   }
+
+  .stat-card {
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stat-card-icon {
+    background-color: #e0e7ff;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stat-card-icon i {
+    font-size: 24px;
+    color: #000;
+}
+.stat-card h5 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+.stat-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.stat-card .stat-card-footer {
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+.stat-card .text-success {
+    color: #0d6efd !important;
+}
+.stat-card .text-danger {
+    color: #d9534f !important;
+}
