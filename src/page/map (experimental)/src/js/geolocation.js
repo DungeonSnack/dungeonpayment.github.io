@@ -47,7 +47,7 @@ export function addUserMarker(map, lonLat) {
         anchor: [0.5, 46],
         anchorXUnits: "fraction",
         anchorYUnits: "pixels",
-        src: "../assets/img/iconp.png", // Jalur ikon yang benar
+        src: "../../../assets/img/iconp.png", // Jalur ikon yang benar
         scale: 0.3,
       }),
     })

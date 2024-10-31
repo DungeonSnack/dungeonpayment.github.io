@@ -10,6 +10,7 @@ import LineString from 'https://cdn.skypack.dev/ol/geom/LineString.js';
 import VectorLayer from 'https://cdn.skypack.dev/ol/layer/Vector.js';
 import VectorSource from 'https://cdn.skypack.dev/ol/source/Vector.js';
 import { Style, Stroke } from 'https://cdn.skypack.dev/ol/style.js';
+import { drawRoute } from './src/js/route.js';
 
 // Koordinat tempat yang ingin ditampilkan
 const place = [107.578624, -6.876631];
@@ -31,9 +32,10 @@ const map = new Map({
 
 // Memanggil fungsi untuk mendapatkan lokasi pengguna
 getUserLocation(map);
-const iconUrl = '../assets/img/icon1.png'; // Jalur ke ikon
+const iconUrl = '../../../assets/img/icon1.png'; // Jalur ke ikon
 addMarker(map, fromLonLat(place), iconUrl);
 addMarker(map, fromLonLat(place2), iconUrl);
+drawRoute(map, fromLonLat(place), addRouteToMap(startCoords, endCoords), fromLonLat(place2))
 
 // Mengambil rute dari OpenRouteService dan menambahkannya ke peta
 async function getRoute(startCoords, endCoords) {
