@@ -100,3 +100,31 @@
     height: auto;
     border-radius: 8px;
   }
+
+
+  // stock product//
+
+  .product-stock-table {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+    width: 40px;
+    height: auto;
+    border-radius: 8px;
+}
+.action-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #dc3545;
+    margin: 0 5px;
+}
+.available-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}

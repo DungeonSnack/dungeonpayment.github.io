@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Stock</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar p-3">
+          <h3>Go<span class="text-dark">Biz</span></h3>
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="./dashboard.html">
+                <i class="bi bi-speedometer2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./stock_produk.html">
+                <i class="bi bi-grid"></i> Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-heart"></i> Favorites
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-chat-dots"></i> Inbox
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-list-check"></i> Order Lists
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-box-seam"></i> Product Stock
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10">
+          <div class="product-stock-table mt-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>Product Stock</h2>
+              <button
+                class="btn"
+                style="background-color: #34a0a4; color: #fff"
+                data-bs-toggle="modal"
+                data-bs-target="#addProductModal"
+              >
+                <i class="bi bi-plus-circle"></i> Add Product
+              </button>
+            </div>
+
+            <!-- Product Table -->
+            <div class="table-responsive mt-3">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Piece</th>
+                    <th>Available Color</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Sample Row -->
+                  <tr>
+                    <td>
+                      <img
+                        src="image_url"
+                        alt="Apple Watch Series 4"
+                        class="product-image"
+                      />
+                    </td>
+                    <td>Apple Watch Series 4</td>
+                    <td>Digital Product</td>
+                    <td>$690.00</td>
+                    <td>63</td>
+                    <td>
+                      <span
+                        class="available-color"
+                        style="background-color: black"
+                      ></span>
+                      <span
+                        class="available-color"
+                        style="background-color: pink"
+                      ></span>
+                      <span
+                        class="available-color"
+                        style="background-color: gray"
+                      ></span>
+                    </td>
+                    <td class="action-icons">
+                      <i class="bi bi-pencil-square"></i>
+                      <i class="bi bi-trash"></i>
+                    </td>
+                  </tr>
+                  <!-- More rows can be added dynamically -->
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-between mt-3">
+                <p>Showing 1-9 of 78</p>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div
+      class="modal fade"
+      id="addProductModal"
+      tabindex="-1"
+      aria-labelledby="addProductModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">
+              Add New Product
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="addProductForm">
+              <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="category"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" required />
+              </div>
+              <div class="mb-3">
+                <label for="piece" class="form-label">Piece</label>
+                <input type="number" class="form-control" id="piece" required />
+              </div>
+              <div class="mb-3">
+                <label for="availableColor" class="form-label"
+                  >Available Colors</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="availableColor"
+                  placeholder="e.g., black, red, blue"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productImage" class="form-label"
+                  >Product Image URL</label
+                >
+                <input
+                  type="url"
+                  class="form-control"
+                  id="productImage"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn"
+                style="background-color: #34a0a4"
+              >
+                Add Product
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
