@@ -1,0 +1,50 @@
+#hasphonenumber {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  #hasphonenumber .circle {
+    width: 24rem;
+    background-color: #ffffff; 
+    border-radius: 1rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  #hasphonenumber .circle:hover {
+    transform: translateY(-5px);
+  }
+  
+  #hasphonenumber .circle #useracclog {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #hasphonenumber .circle #useracclog a {
+    text-decoration: none;
+    color: #333333; /* Replace with the actual color value from your SCSS map */
+  }
+  
+  #hasphonenumber .circle #whatsauthqr {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  #hasphonenumber .circle #whatsauthqr:hover {
+    transform: scale(1.05);
+  }
+  
+  #hasphonenumber .circle #whatsauthcounter,
+  #hasphonenumber .circle #logs {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
