@@ -438,7 +438,7 @@ nav ul li a {
   align-items: center;
   text-align: center;
   padding: 50px 0;
-  background-image: url("/assets/img/background-1.png"); /* Path ke gambar */
+  background-image: url("./../../assets/img/background-1.png"); /* Path ke gambar */
   background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
   background-position: center; /* Memusatkan gambar */
   background-repeat: no-repeat; /* Menghindari pengulangan gambar */
@@ -546,7 +546,7 @@ nav ul li a {
 }
 
 .faq-section {
-  background-image: url("/assets/img/background-2.png"); /* Path ke gambar */
+  background-image: url("./../../assets/img/background-2.png"); /* Path ke gambar */
   background-size: cover; /* Memastikan gambar mencakup seluruh elemen */
   background-position: center; /* Memusatkan gambar */
   background-repeat: no-repeat; /* Menghindari pengulangan gambar */
