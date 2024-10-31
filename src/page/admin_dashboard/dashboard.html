@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <!-- Sidebar and Main Content Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="logo">DashStack</h2>
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Products</a>
+                <a href="#">Favorites</a>
+                <a href="#">Inbox</a>
+                <a href="#">Order Lists</a>
+                <a href="#">Product Stock</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Stats -->
+            <div class="stats">
+                <div class="card">
+                    <h5>Total User</h5>
+                    <p class="stat-value">40,689</p>
+                    <p class="stat-change positive">↑ 8.5% Up from yesterday</p>
+                </div>
+                <div class="card">
+                    <h5>Total Order</h5>
+                    <p class="stat-value">10,293</p>
+                    <p class="stat-change positive">↑ 1.3% Up from past week</p>
+                </div>
+                <div class="card">
+                    <h5>Total Sales</h5>
+                    <p class="stat-value">$89,000</p>
+                    <p class="stat-change negative">↓ 4.3% Down from yesterday</p>
+                </div>
+                <div class="card">
+                    <h5>Total Pending</h5>
+                    <p class="stat-value">2,040</p>
+                    <p class="stat-change positive">↑ 1.8% Up from yesterday</p>
+                </div>
+            </div>
+
+            <!-- Sales Details Chart -->
+            <div class="card">
+                <h5>Sales Details</h5>
+                <canvas id="lineChart" class="line-chart"></canvas>
+            </div>
+
+            <!-- Deals Details Table -->
+            <div class="card">
+                <h5>Deals Details</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Location</th>
+                            <th>Date - Time</th>
+                            <th>Piece</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple Watch</td>
+                            <td>6096 Marjolaine Landing</td>
+                            <td>12.09.2019 - 12.53 PM</td>
+                            <td>423</td>
+                            <td>$34,295</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+                        <!-- Tambahkan baris lain sesuai kebutuhan -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
