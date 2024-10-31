@@ -42,24 +42,6 @@ function logout() {
 // Memastikan ketika halaman dimuat, status login diperiksa
 window.onload = checkLoginStatus;
 
-// // Fungsi untuk menginisialisasi observer
-// function onIntersection(entries, observer) {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('visible'); // Tambahkan kelas visible saat elemen masuk viewport
-//             observer.unobserve(entry.target); // Hentikan observasi setelah animasi berjalan
-//         }
-//     });
-// }
-
-// // Inisialisasi Intersection Observer
-// const observer = new IntersectionObserver(onIntersection, {
-//     threshold: 0.5 // Memastikan 50% dari elemen terlihat sebelum memicu animasi
-// });
-
-// // Pilih elemen .hero-image dan observe
-// const heroImage = document.querySelector('.hero-image');
-// observer.observe(heroImage);
 
 // Fungsi untuk menginisialisasi observer
 function onIntersection(entries, observer) {
